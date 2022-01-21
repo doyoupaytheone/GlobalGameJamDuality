@@ -184,8 +184,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 7.5
   moveSmoothing: 0.075
-  fallDistanceMultiplier: 1
-  fallAccelerationMultiplier: 1
+  fallDistanceMultiplier: 0.75
+  fallAccelerationMultiplier: 1.5
   maxJumpsAllowed: 2
   jumpForce: 180
   isGrounded: 0

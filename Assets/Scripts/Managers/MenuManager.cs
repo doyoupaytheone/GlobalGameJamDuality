@@ -8,19 +8,9 @@ public class MenuManager : MonoBehaviour
 {
     #region SerializeField Variables
 
-    [Header("Menu Groups")]
-    [SerializeField] private CanvasFadeEffect _mainMenuGroup;
-    [SerializeField] private CanvasFadeEffect _fileSelectGroup;
-    [SerializeField] private CanvasFadeEffect _dataManagementGroup;
-    [SerializeField] private CanvasFadeEffect _audioSettingsGroup;
-    [SerializeField] private CanvasFadeEffect _videoSettingsGroup;
-    [SerializeField] private CanvasFadeEffect _customControlsGroup;
-    [SerializeField] private CanvasFadeEffect _cosmeticsGroup;
-    [SerializeField] private CanvasFadeEffect _attributionGroup;
-
     [Header("Save Slot Objects")]
     [SerializeField] private TextMeshProUGUI[] _playTimesText;
-    [SerializeField] private TextMeshProUGUI[] _playTimesManageText;
+    [SerializeField] private TextMeshProUGUI[] _playTimesTextData;
 
     [Header("Video Selections")]
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
@@ -38,7 +28,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _upButton;
     [SerializeField] private TextMeshProUGUI _downButton;
     [SerializeField] private TextMeshProUGUI _interactButton;
-    [SerializeField] private TextMeshProUGUI _companionButton;
+    [SerializeField] private TextMeshProUGUI _jumpButton;
     [SerializeField] private TextMeshProUGUI _sprintButton;
     [SerializeField] private TextMeshProUGUI _primaryAttackButton;
     [SerializeField] private TextMeshProUGUI _secondaryAttackButton;
@@ -69,10 +59,7 @@ public class MenuManager : MonoBehaviour
     {
         //Select the save slot in GM
         _selectedSaveSlot = slotIndex;
-        bool isSlotEmpty = GameManager.Instance.SelectSaveSlot(slotIndex);
-
-        //Closes the main menu to see house view
-        ToggleMenu(_mainMenuGroup);
+        GameManager.Instance.SelectSaveSlot(slotIndex);
     }
 
     public void LoadMenuSettings(float[] playTimes)
@@ -81,14 +68,14 @@ public class MenuManager : MonoBehaviour
         {
             if (playTimes[i] < 1)
             {
-                _playTimesText[i].text = "0:00";
-                _playTimesManageText[i].text = "0:00";
+                _playTimesText[i].text = "Empty";
+                _playTimesTextData[i].text = "Empty";
             }
             else
             {
                 string minutes = String.Format("{0:00}", playTimes[i] % 60);
                 _playTimesText[i].text = (int)(playTimes[i] / 60) + ":" + minutes;
-                _playTimesManageText[i].text = (int)(playTimes[i] / 60) + ":" + minutes;
+                _playTimesTextData[i].text = (int)(playTimes[i] / 60) + ":" + minutes;
             }
         }
 
@@ -169,22 +156,6 @@ public class MenuManager : MonoBehaviour
     //Makes a game object invisible
     public void ToggleOffDisplay(GameObject objectToToggle) => objectToToggle.SetActive(false);
 
-    //Makes the appropriate game objects visible/invisible to reset the menu
-    public void ToggleDataMenu()
-    {
-        var fileFadeTime = 0;
-        var dataFadeTime = 0;
-
-        if (!_fileSelectGroup.isVisible) fileFadeTime = 1;
-        if (!_dataManagementGroup.isVisible) dataFadeTime = 1;
-        
-        _fileSelectGroup.ToggleFade(fileFadeTime);
-        _dataManagementGroup.ToggleFade(dataFadeTime);
-
-        //Refreshes the settings data
-        GameManager.Instance.CollectAndUpdateData();
-    }
-
     public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0);
 
     //Resets the current values for the custom player inputs
@@ -195,7 +166,7 @@ public class MenuManager : MonoBehaviour
         _upButton.text = PlayerPrefData.Up.ToString();
         _downButton.text = PlayerPrefData.Down.ToString();
         _interactButton.text = PlayerPrefData.Interact.ToString();
-        _companionButton.text = PlayerPrefData.Jump.ToString();
+        _jumpButton.text = PlayerPrefData.Jump.ToString();
         _sprintButton.text = PlayerPrefData.Sprint.ToString();
         _primaryAttackButton.text = PlayerPrefData.PrimaryAttack.ToString();
         _secondaryAttackButton.text = PlayerPrefData.SecondaryAttack.ToString();

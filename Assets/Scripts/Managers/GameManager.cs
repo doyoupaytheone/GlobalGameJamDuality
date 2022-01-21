@@ -160,13 +160,13 @@ public class GameManager : MonoSingleton<GameManager>
     }
 
     //Changes the scene to a particular index
-    public void ChangeScene(int sceneIndex)
+    public void ChangeScene(int slotIndex)
     {
         SavePrefs();
         SaveGame();
 
         //Begins the transition to the next scene
-        StartCoroutine(TransitionToNextScene(sceneIndex));
+        StartCoroutine(TransitionToNextScene(_saveSlots[slotIndex].FurthestLevel));
     }
 
     //Changes the scene to a particular index
@@ -281,8 +281,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         for (int i = 0; i < _saveSlots.Length; i++)
         {
-            if (_saveSlots[i] == null)
-                _saveSlots[i] = new SaveData("", 0, 0, 0);
+            if (_saveSlots[i] == null) _saveSlots[i] = new SaveData(0, 1);
         }
     }
 

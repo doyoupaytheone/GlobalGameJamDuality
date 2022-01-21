@@ -1,5 +1,3 @@
-//Created by Justin Simmons
-
 using UnityEngine;
 
 public static class PlayerPrefData

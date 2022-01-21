@@ -23,7 +23,7 @@ public class InputManager : MonoBehaviour
         PlayerPrefs.SetString("up", PlayerPrefData.Up.ToString());
         PlayerPrefs.SetString("down", PlayerPrefData.Down.ToString());
         PlayerPrefs.SetString("interact", PlayerPrefData.Interact.ToString());
-        PlayerPrefs.SetString("companion", PlayerPrefData.Jump.ToString());
+        PlayerPrefs.SetString("jump", PlayerPrefData.Jump.ToString());
         PlayerPrefs.SetString("sprint", PlayerPrefData.Sprint.ToString());
         PlayerPrefs.SetString("primaryAttack", PlayerPrefData.PrimaryAttack.ToString());
         PlayerPrefs.SetString("secondaryAttack", PlayerPrefData.SecondaryAttack.ToString());
@@ -37,7 +37,7 @@ public class InputManager : MonoBehaviour
         PlayerPrefData.Up = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("up", KeyCode.W.ToString()));
         PlayerPrefData.Down = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("down", KeyCode.S.ToString()));
         PlayerPrefData.Interact = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("interact", KeyCode.E.ToString()));
-        PlayerPrefData.Jump = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("companion", KeyCode.Space.ToString()));
+        PlayerPrefData.Jump = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("jump", KeyCode.Space.ToString()));
         PlayerPrefData.Sprint = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("sprint", KeyCode.LeftShift.ToString()));
         PlayerPrefData.PrimaryAttack = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("primaryAttack", KeyCode.Mouse0.ToString()));
         PlayerPrefData.SecondaryAttack = (KeyCode)Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("secondaryAttack", KeyCode.Mouse1.ToString()));
@@ -63,7 +63,7 @@ public class InputManager : MonoBehaviour
             case ("interact"):
                 PlayerPrefData.Interact = newInput;
                 break;
-            case ("companion"):
+            case ("jump"):
                 PlayerPrefData.Jump = newInput;
                 break;
             case ("sprint"):

@@ -1,6 +1,4 @@
-﻿//Created by Justin Simmons
-
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 
 public class AudioManager : MonoBehaviour
