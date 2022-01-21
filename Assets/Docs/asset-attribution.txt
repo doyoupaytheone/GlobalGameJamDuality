@@ -1,0 +1,18 @@
+Asset Attribution
+
+Sprites:
+	Benza by megupets
+	https://opengameart.org/content/benza	
+	
+
+Audio:
+	Classical_Loop.mp3 by 4barrelcarb
+	https://freesound.org/people/4barrelcarb/sounds/365378/
+
+	UI Button Click by benzix2
+	https://freesound.org/people/benzix2/sounds/467951/
+
+Font:
+
+	GAGLIOSTRO by Chris Robot
+	https://fontlibrary.org/en/font/gagliostro
