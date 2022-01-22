@@ -10,8 +10,12 @@ public class PlayerDuality : MonoBehaviour
     [SerializeField] private GameObject darkObjects;
     [SerializeField] private GameObject lightObjects;
 
-    private int dualityTimer = 0;
-    private bool isInLightMode = true;
+    public int dualityTimer = 0;
+    public bool isInLightMode = true;
+
+    private SpriteRenderer background;
+
+    private void Awake() => background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
 
     private void Start()
     {
@@ -57,8 +61,13 @@ public class PlayerDuality : MonoBehaviour
     {
         if (Input.GetKeyDown(PlayerPrefData.Interact))
         {
+            //Toggles the appropriate world objects
             darkObjects.SetActive(isInLightMode);
             lightObjects.SetActive(!isInLightMode);
+
+            //Toggles the background color
+            background.enabled = isInLightMode;
+
             ToggleType();
         }
     }

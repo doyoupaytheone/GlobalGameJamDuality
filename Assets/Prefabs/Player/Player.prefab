@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 4796839457928132006}
   - component: {fileID: 5116038683203663620}
   - component: {fileID: 4796839457928132001}
+  - component: {fileID: 92713252625227213}
   - component: {fileID: 4796839457928132011}
   - component: {fileID: 4796839457928132010}
   - component: {fileID: 8987343519266318611}
@@ -110,7 +111,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: -9095717837082945937, guid: bd3cb4af8406d4436a2ae8c2aafe1f8d, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -202,6 +203,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &92713252625227213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4796839457928132000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 972c4d7025b2edc4bb2e57d7e7240dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slider: {fileID: 0}
+  maxHealth: 1000
+  currentHealth: 1000
 --- !u!114 &4796839457928132011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,13 +249,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4352ce9af02bc67419627c6d414b80e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primaryAttackCooldown: 0.25
+  primaryAttackDamage: 20
   swordProjectile: {fileID: 5343145964411688975, guid: 99fc7abafb9fc704992971a27448217a, type: 3}
-  startCooldown: 0.5
+  secondaryAttackCooldown: 0.25
   attackRange: 1.15
+  secondaryAttackDamage: 20
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
-  damage: 15
   attackPos: {fileID: 44460739}
 --- !u!114 &8987343519266318611
 MonoBehaviour:
@@ -258,3 +276,7 @@ MonoBehaviour:
   lightSlider: {fileID: 0}
   darkObjects: {fileID: 0}
   lightObjects: {fileID: 0}
+  darkColor: {r: 0, g: 0, b: 0, a: 0}
+  lightColor: {r: 1, g: 1, b: 1, a: 0}
+  dualityTimer: 0
+  isInLightMode: 1

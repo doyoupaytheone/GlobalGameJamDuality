@@ -2,9 +2,9 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
-    [SerializeField] private float speed = 10;
-    [SerializeField] private float maxDistance = 0.2f;
-    [SerializeField] private int damagePower = 25;
+    public float speed = 10;
+    public float maxDistance = 0.2f;
+    public int damagePower = 25;
 
     private Transform projectileTrans;
     private Vector2 startingPosition;
