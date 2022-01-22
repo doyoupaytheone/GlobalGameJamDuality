@@ -5,8 +5,10 @@ public class PlayerDuality : MonoBehaviour
 {
     [Tooltip("The time in milliseconds it takes to max out either side of the duality meter.")]
     [SerializeField] private int maxDualityTime;
-    [SerializeField] private Slider lightSlider;
     [SerializeField] private Slider darkSlider;
+    [SerializeField] private Slider lightSlider;
+    [SerializeField] private GameObject darkObjects;
+    [SerializeField] private GameObject lightObjects;
 
     private int dualityTimer = 0;
     private bool isInLightMode = true;
@@ -14,15 +16,17 @@ public class PlayerDuality : MonoBehaviour
     private void Start()
     {
         //Initializes the max time for each timer in milliseconds
-        lightSlider.maxValue = maxDualityTime;
         darkSlider.maxValue = maxDualityTime;
+        lightSlider.maxValue = maxDualityTime;
+
+        darkObjects.SetActive(false); //Sets the Obsidian world false first when level loads
 
         InvokeRepeating("AddTimeToTimer", 0.1f, 0.1f); //Repeats method every 0.1 seconds
     }
 
     private void Update()
     {
-        //Receives player input to change type
+        WorldSwap(); //Receives player input to change type
     }
 
     private void ToggleType()
@@ -47,5 +51,15 @@ public class PlayerDuality : MonoBehaviour
     {
         if (isInLightMode) lightSlider.value = dualityTimer;
         else darkSlider.value = dualityTimer;
+    }
+
+    private void WorldSwap()
+    {
+        if (Input.GetKeyDown(PlayerPrefData.Interact))
+        {
+            darkObjects.SetActive(isInLightMode);
+            lightObjects.SetActive(!isInLightMode);
+            ToggleType();
+        }
     }
 }
