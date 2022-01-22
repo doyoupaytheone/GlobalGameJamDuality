@@ -13,7 +13,7 @@ public class WorldSwitch : MonoBehaviour
     
     public GameObject White;
 
-
+    public bool worldBlack = false;
 
     private void Awake()
     {
