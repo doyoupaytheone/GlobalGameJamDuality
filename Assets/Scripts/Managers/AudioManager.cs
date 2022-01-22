@@ -11,6 +11,8 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] _musicTracks;
     [SerializeField] private AudioMixerSnapshot volumeOffSnapshot;
     [SerializeField] private AudioMixerSnapshot volumeOnSnapshot;
+   
+
 
     private int FADETIME = 2;
 
