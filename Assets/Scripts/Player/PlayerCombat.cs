@@ -1,3 +1,5 @@
+//Created by Justin Simmons
+//Edited by Akeem Roberts
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,17 +11,32 @@ public class PlayerCombat : MonoBehaviour
     private List<GameObject> projectilePool = new List<GameObject>();
     private Quaternion lastClickAngle = Quaternion.identity;
 
+
+    // All variables below is for secondary attack (Meele) 
+    private float secondAttackCooldown;
+    public float startCooldown;
+    public float attackRange;
+    public LayerMask whatIsEnemies;
+    public int damage;
+    public Transform attackPos;
+
     private void Awake() => playerTrans = GetComponent<Transform>();
+
+    
 
     private void Start()
     {
         InitializeWeapon(swordProjectile);
+
+       
     }
 
     private void Update()
     {
         if (Input.GetKeyDown(PlayerPrefData.PrimaryAttack)) Attack();
         if (Input.GetKeyDown(PlayerPrefData.SecondaryAttack)) SecondaryAttack();
+
+     
     }
 
     private void InitializeWeapon(GameObject projectilePrefab)
@@ -34,6 +51,11 @@ public class PlayerCombat : MonoBehaviour
 
     private void Attack()
     {
+
+       
+
+
+
         //Finds the direction of the mouse click, calculates the angle between it and the player and makes a proper rotation
         var mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var angle = Mathf.Atan2(mp.y - playerTrans.position.y, mp.x - playerTrans.position.x) * 180 / Mathf.PI; 
@@ -43,11 +65,32 @@ public class PlayerCombat : MonoBehaviour
         FireWeapon();
     }
 
-    private void SecondaryAttack()
+    private void SecondaryAttack() // Enemies require layer mask for this attack 
     {
+        Debug.Log("Secondary attack activated");
 
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<Enemy>().TakeDamage(damage);
+        }
+        
+        if(secondAttackCooldown <= 0)
+        {
+            //Can attack again
+            secondAttackCooldown = startCooldown;
+        }
+        else
+        {
+            secondAttackCooldown -= Time.deltaTime;
+        }
     }
 
+    private void OnDrawGizmosSelected() //Shows attack range in scene view
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
     private GameObject CreateBullet(GameObject bulletPrefab)
     {
         //Creates a new bullet at  the bullet spawner and grabs it's bullet controller script
