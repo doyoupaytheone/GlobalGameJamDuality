@@ -426,26 +426,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 2079650826, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079650826, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -50
-      objectReference: {fileID: 0}
-    - target: {fileID: 2079650828, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 39133978388895715, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 373218125986203615, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2044000935922662958, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -610,14 +594,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 2361199599161123569, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_text
-      value: 'Interact:'
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199599161123583, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_Name
-      value: InteractText
-      objectReference: {fileID: 0}
     - target: {fileID: 2361199599280208747, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -690,10 +666,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 4214120380987610943, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_Alpha
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5167514405222175529, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -706,10 +678,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 6640079516995650525, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7974976531800469449, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -738,18 +706,11 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 8940998308340021500, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_Alpha
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9048294200940434744, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    m_RemovedComponents:
-    - {fileID: 2079650829, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-    - {fileID: 2079650830, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-    - {fileID: 2079650831, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
 --- !u!4 &3500367283780944485 stripped
 Transform:
