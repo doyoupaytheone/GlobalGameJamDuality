@@ -98,8 +98,6 @@ public class PlayerCombat : MonoBehaviour
 
     private void SecondaryAttack() // Enemies require layer mask for this attack 
     {
-        Debug.Log("Secondary attack activated.");
-
         //Toggles to can't attack
         canAttackSecondary = false;
 

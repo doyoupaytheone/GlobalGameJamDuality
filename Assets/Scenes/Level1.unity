@@ -123,6 +123,72 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &210838139
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 459351314}
+    m_Modifications:
+    - target: {fileID: 7258336428565147900, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_Name
+      value: NeutralWall (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 16.93
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 90
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+--- !u!4 &210838140 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7258336428565147901, guid: b24efbe5c38a4c644ab0bba37476dbee, type: 3}
+  m_PrefabInstance: {fileID: 210838139}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &280673293
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,6 +252,7 @@ Transform:
   - {fileID: 690545964}
   - {fileID: 7409438632798692423}
   - {fileID: 583115858}
+  - {fileID: 210838140}
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1017,6 +1084,18 @@ PrefabInstance:
     - target: {fileID: 738221934922120720, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_Name
       value: GUIManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270305496801420089, guid: 416c7300853274b4980be648749832a5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270305496801420089, guid: 416c7300853274b4980be648749832a5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1270305496801420089, guid: 416c7300853274b4980be648749832a5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -285
       objectReference: {fileID: 0}
     - target: {fileID: 8930631996695639359, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_AnchorMax.x
