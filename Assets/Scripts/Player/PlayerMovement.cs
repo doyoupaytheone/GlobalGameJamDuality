@@ -32,10 +32,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Calculates player movement based on input
-        CheckForMovement();
-        //Checks for player jump input
-        if (Input.GetKeyDown(PlayerPrefData.Jump)) Jump();
+        if (!GameManager.Instance.IsFrozen)
+        {
+            //Calculates player movement based on input
+            CheckForMovement();
+            //Checks for player jump input
+            if (Input.GetKeyDown(PlayerPrefData.Jump)) Jump();
+        }
     }
 
     private void CheckForMovement()

@@ -1,5 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.UI;
+﻿using System.Collections;
+using UnityEngine;
 
 public class GUIManager : MonoBehaviour
 {
@@ -8,8 +8,7 @@ public class GUIManager : MonoBehaviour
     private void Update()
     {
         //Pauses the game if the escape key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
-            PauseGame();
+        if (Input.GetKeyDown(KeyCode.Escape)) PauseGame();
     }
 
     #region InGameMenus
@@ -27,12 +26,6 @@ public class GUIManager : MonoBehaviour
         GameManager.Instance.ChangeScene(0);
     }
 
-    //Opens the death menu
-    public void OpenPlayerDiedMenu()
-    {
-        PauseGame();
-    }
-
     //Restarts the current scene
     public void RestartLevel()
     {
@@ -42,20 +35,24 @@ public class GUIManager : MonoBehaviour
 
     public void PauseGame()
     {
-        //Checks to see if the game is currently paused
-        bool isGamePaused = GameManager.Instance.currentGameState != GameManager.GameState.Paused;
+        bool isGamePaused = GameManager.Instance.currentGameState != GameManager.GameState.Paused; //Checks to see if the game is currently paused
+        GameManager.Instance.Pause(isGamePaused); //If the game is paused, start the time first
+        ToggleMenu(pauseMenu); //Opens or closes the pause menu
+    }
 
-        //Pause or resume the game depending on the current state
-        GameManager.Instance.Pause(isGamePaused);
-
-        //Opens or closes the pause menu and makes sure it is reset for use
+    private IEnumerator WaitForFade(bool isGamePaused)
+    {
         if (isGamePaused)
         {
-
+            GameManager.Instance.Pause(isGamePaused); //If the game is paused, start the time first
+            ToggleMenu(pauseMenu); //Opens or closes the pause menu
+            yield return new WaitForSeconds(2); //Waits for fade
         }
         else
         {
-
+            ToggleMenu(pauseMenu); //Opens or closes the pause menu
+            yield return new WaitForSeconds(2); //Waits for fade
+            GameManager.Instance.Pause(isGamePaused); //If the game is not pause, stop the time after the fade
         }
     }
 

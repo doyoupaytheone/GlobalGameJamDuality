@@ -106,8 +106,6 @@ public class GameManager : MonoSingleton<GameManager>
             //"Stops" the game
             if (paused)
             {
-                //Freezes movement in game
-                Time.timeScale = 0f;
                 //Freezes player input
                 _isFrozen = true;
                 //Changes the game state
@@ -116,7 +114,6 @@ public class GameManager : MonoSingleton<GameManager>
             //"Starts" the game
             else
             {
-                Time.timeScale = 1f;
                 _isFrozen = false;
                 currentGameState = GameState.Playing;
             }
@@ -125,9 +122,9 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void PlayerHasDied()
     {
-        //Finds the gui manager and asks it to open the death menu
-        _guiManager = FindObjectOfType<GUIManager>();
-        _guiManager.OpenPlayerDiedMenu();
+        //Do a death effect
+
+        RefreshScene();
     }
 
     #endregion

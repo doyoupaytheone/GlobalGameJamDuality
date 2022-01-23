@@ -39,6 +39,7 @@ public class HealthDisplay : MonoBehaviour
         if (currentHealth <= 0)
         {
             if (this.gameObject.CompareTag("Enemy")) this.gameObject.SetActive(false);
+            else if (this.gameObject.CompareTag("Player")) GameManager.Instance.PlayerHasDied();
         }
     }
 

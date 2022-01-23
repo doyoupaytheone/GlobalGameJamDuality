@@ -35,7 +35,8 @@ public class PlayerDuality : MonoBehaviour
 
     private void Update()
     {
-        WorldSwap(); //Receives player input to change type
+        if (!GameManager.Instance.IsFrozen)
+            WorldSwap(); //Receives player input to change type
     }
 
     private void ToggleType()

@@ -26,7 +26,10 @@ public class EnemyBehaviourGrounded : MonoBehaviour
 
     private void Update()
     {
-        if (!isStopped) MoveForward();
+        if (!GameManager.Instance.IsFrozen)
+        {
+            if (!isStopped) MoveForward();
+        }
     }
 
     private void CheckEnvironment()
@@ -46,7 +49,7 @@ public class EnemyBehaviourGrounded : MonoBehaviour
                 isStopped = true;
                 if (canAttack) Attack();
             }
-            else Flip();
+            else if (!hit.collider.gameObject.CompareTag("Projectile")) Flip();
         }
         else if (isStopped) isStopped = false;
 

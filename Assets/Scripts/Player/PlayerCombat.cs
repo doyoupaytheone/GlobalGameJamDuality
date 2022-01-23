@@ -46,12 +46,15 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
-        AttackTypeCheck();
-        CheckAttackTimers();
-       // ApplyDamage();
+        if (!GameManager.Instance.IsFrozen)
+        {
+            AttackTypeCheck();
+            CheckAttackTimers();
+            //ApplyDamage();
 
-        if (canAttackPrimary && Input.GetKeyDown(PlayerPrefData.PrimaryAttack)) PrimaryAttack();
-        if (canAttackSecondary && Input.GetKeyDown(PlayerPrefData.SecondaryAttack)) SecondaryAttack();
+            if (canAttackPrimary && Input.GetKeyDown(PlayerPrefData.PrimaryAttack)) PrimaryAttack();
+            if (canAttackSecondary && Input.GetKeyDown(PlayerPrefData.SecondaryAttack)) SecondaryAttack();
+        }
     }
 
     private void CheckAttackTimers()
@@ -90,9 +93,6 @@ public class PlayerCombat : MonoBehaviour
 
     private void PrimaryAttack()
     {
-        
-        
-
         //Toggles to can't attack
         canAttackPrimary = false;
 
@@ -107,10 +107,6 @@ public class PlayerCombat : MonoBehaviour
 
     private void SecondaryAttack() // Enemies require layer mask for this attack 
     {
-
-        
-        
-
         //Toggles to can't attack
         canAttackSecondary = false;
 
