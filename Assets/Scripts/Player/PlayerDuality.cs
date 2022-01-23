@@ -9,9 +9,11 @@ public class PlayerDuality : MonoBehaviour
     [SerializeField] private Slider lightSlider;
     [SerializeField] private GameObject darkObjects;
     [SerializeField] private GameObject lightObjects;
+    [SerializeField] private GameObject[] darkEnemies;
+    [SerializeField] private GameObject[] lightEnemies;
 
     public int dualityTimer = 0;
-    public bool isInLightMode = true;
+    public bool isInLightMode = false;
 
     private SpriteRenderer background;
 
@@ -23,7 +25,10 @@ public class PlayerDuality : MonoBehaviour
         darkSlider.maxValue = maxDualityTime;
         lightSlider.maxValue = maxDualityTime;
 
-        darkObjects.SetActive(false); //Sets the Obsidian world false first when level loads
+        //Sets the Obsidian world false first when level loads
+        darkObjects.SetActive(false);
+        ToggleEnemyVisibility(darkEnemies, false);
+        ToggleEnemyVisibility(lightEnemies, true);
 
         InvokeRepeating("AddTimeToTimer", 0.1f, 0.1f); //Repeats method every 0.1 seconds
     }
@@ -65,10 +70,31 @@ public class PlayerDuality : MonoBehaviour
             darkObjects.SetActive(isInLightMode);
             lightObjects.SetActive(!isInLightMode);
 
+            //Toggles the appropriate enemies
+            ToggleEnemyVisibility(darkEnemies, false);
+            ToggleEnemyVisibility(lightEnemies, true);
+
             //Toggles the background color
             background.enabled = isInLightMode;
 
             ToggleType();
+        }
+    }
+
+    private void ToggleEnemyVisibility(GameObject[] enemies, bool typeIsLight)
+    {
+        foreach (GameObject e in enemies)
+        {
+            if (typeIsLight)
+            {
+                e.GetComponent<SpriteRenderer>().enabled = !isInLightMode;
+                e.GetComponentInChildren<Canvas>().enabled = !isInLightMode;
+            }
+            else
+            {
+                e.GetComponent<SpriteRenderer>().enabled = isInLightMode;
+                e.GetComponentInChildren<Canvas>().enabled = isInLightMode;
+            }
         }
     }
 }
