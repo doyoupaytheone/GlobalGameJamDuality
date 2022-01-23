@@ -26,8 +26,12 @@ public class PlayerCombat : MonoBehaviour
 
     private Transform playerTrans;
     private PlayerDuality playerDuality;
+    private HealthDisplay healthDisplay;
     private List<GameObject> projectilePool = new List<GameObject>();
     private Quaternion lastClickAngle = Quaternion.identity;
+
+    public bool attackTypeIsLight; // Bool that changes attack type depending on if in light or dark mode
+    private bool applyDamage;
 
     private void Awake()
     {
@@ -42,7 +46,9 @@ public class PlayerCombat : MonoBehaviour
 
     private void Update()
     {
+        AttackTypeCheck();
         CheckAttackTimers();
+       // ApplyDamage();
 
         if (canAttackPrimary && Input.GetKeyDown(PlayerPrefData.PrimaryAttack)) PrimaryAttack();
         if (canAttackSecondary && Input.GetKeyDown(PlayerPrefData.SecondaryAttack)) SecondaryAttack();
@@ -84,6 +90,9 @@ public class PlayerCombat : MonoBehaviour
 
     private void PrimaryAttack()
     {
+        
+        
+
         //Toggles to can't attack
         canAttackPrimary = false;
 
@@ -98,6 +107,10 @@ public class PlayerCombat : MonoBehaviour
 
     private void SecondaryAttack() // Enemies require layer mask for this attack 
     {
+
+        
+        
+
         //Toggles to can't attack
         canAttackSecondary = false;
 
@@ -146,4 +159,18 @@ public class PlayerCombat : MonoBehaviour
             }
         }
     }
+
+    private void AttackTypeCheck()
+    {
+        if (playerDuality.isInLightMode == true)
+        {
+            attackTypeIsLight = true;
+        }
+        else if (playerDuality.isInLightMode == false)
+        {
+            attackTypeIsLight = false;
+        }
+    }
+
+   
 }
