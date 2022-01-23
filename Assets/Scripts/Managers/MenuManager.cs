@@ -150,12 +150,6 @@ public class MenuManager : MonoBehaviour
         _resolutionDropdown.RefreshShownValue();
     }
 
-    //Makes a game object visible
-    public void ToggleOnDisplay(GameObject objectToToggle) => objectToToggle.SetActive(true);
-
-    //Makes a game object invisible
-    public void ToggleOffDisplay(GameObject objectToToggle) => objectToToggle.SetActive(false);
-
     public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0);
 
     //Resets the current values for the custom player inputs
