@@ -1,15 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthDisplay : MonoBehaviour
+public class HealthController : MonoBehaviour
 {
     [SerializeField] private Slider slider;
     [SerializeField] private float maxHealth = 1000;
 
-    public bool isLightEnemy;
-
     public float currentHealth = 1000;
-   
+    public bool isLightEnemy;
+    public bool isDead;
 
     private void Start()
     {
@@ -38,10 +37,21 @@ public class HealthDisplay : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            if (this.gameObject.CompareTag("Enemy")) this.gameObject.SetActive(false);
-            else if (this.gameObject.CompareTag("Player")) GameManager.Instance.PlayerHasDied();
+            if (!isDead) DeathSequence();
+            isDead = true;
         }
     }
 
-   
+    private void DeathSequence()
+    {
+        if (this.gameObject.CompareTag("Enemy"))
+        {
+            this.gameObject.SetActive(false);
+        }
+        else if (this.gameObject.CompareTag("Player"))
+        {
+            this.gameObject.GetComponent<Animator>().SetTrigger("death");
+            GameManager.Instance.PlayerHasDied();
+        }
+    }
 }

@@ -23,7 +23,7 @@ public class ProjectileMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        var health = collision.GetComponent<HealthDisplay>();
+        var health = collision.GetComponent<HealthController>();
         if (health && !collision.CompareTag("Player")) health.ChangeHealth(-damagePower);
     }
 }

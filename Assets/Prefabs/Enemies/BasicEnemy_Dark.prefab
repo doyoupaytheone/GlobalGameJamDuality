@@ -243,7 +243,7 @@ SpriteRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5496725747898075106}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_DynamicOccludee: 1
@@ -343,12 +343,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 5496725747898075106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 972c4d7025b2edc4bb2e57d7e7240dcf, type: 3}
+  m_Script: {fileID: 11500000, guid: c56b6cce67f1df44493c6dcc977e1d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5496725746832693325}
   maxHealth: 400
   currentHealth: 400
+  isLightEnemy: 0
+  isDead: 0
 --- !u!114 &5496725747898075109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,7 +489,7 @@ Canvas:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5496725748426278885}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_RenderMode: 2
   m_Camera: {fileID: 0}

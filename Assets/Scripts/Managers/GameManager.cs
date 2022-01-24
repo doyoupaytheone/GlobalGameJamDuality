@@ -82,6 +82,7 @@ public class GameManager : MonoSingleton<GameManager>
 
     private void FindScriptsInScene()
     {
+        _guiManager = FindObjectOfType<GUIManager>();
         _menuManager = FindObjectOfType<MenuManager>();
         _audioManager = FindObjectOfType<AudioManager>();
         _videoManager = FindObjectOfType<VideoManager>();
@@ -123,8 +124,7 @@ public class GameManager : MonoSingleton<GameManager>
     public void PlayerHasDied()
     {
         //Do a death effect
-
-        RefreshScene();
+        _guiManager.PauseGame();
     }
 
     #endregion

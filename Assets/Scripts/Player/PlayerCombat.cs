@@ -25,8 +25,9 @@ public class PlayerCombat : MonoBehaviour
     [SerializeField] private Transform attackPos;
 
     private Transform playerTrans;
+    private Animator animator;
     private PlayerDuality playerDuality;
-    private HealthDisplay healthDisplay;
+    private HealthController healthDisplay;
     private List<GameObject> projectilePool = new List<GameObject>();
     private Quaternion lastClickAngle = Quaternion.identity;
 
@@ -36,6 +37,7 @@ public class PlayerCombat : MonoBehaviour
     private void Awake()
     {
         playerTrans = GetComponent<Transform>();
+        animator = GetComponent<Animator>();
         playerDuality = GetComponent<PlayerDuality>();
     }
 
@@ -110,6 +112,8 @@ public class PlayerCombat : MonoBehaviour
         //Toggles to can't attack
         canAttackSecondary = false;
 
+        if (animator != null) animator.SetTrigger("attack"); //Plays the attack animation
+
         int dualityDamage; //Stores a calculation for damage depending on the current duality time
         if (playerDuality.dualityTimer == 0) dualityDamage = (int)(secondaryAttackDamage * 0.05f); //Sets normal damage
         else dualityDamage = (int)(secondaryAttackDamage * playerDuality.dualityTimer * 0.05f); //Sets damage depending on duality timer
@@ -117,7 +121,7 @@ public class PlayerCombat : MonoBehaviour
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 
         for (int i = 0; i < enemiesToDamage.Length; i++)
-            enemiesToDamage[i].GetComponent<HealthDisplay>().ChangeHealth(-dualityDamage);
+            enemiesToDamage[i].GetComponent<HealthController>().ChangeHealth(-dualityDamage);
     }
 
     private void OnDrawGizmosSelected() //Shows attack range in scene view
@@ -129,7 +133,7 @@ public class PlayerCombat : MonoBehaviour
     private GameObject CreateBullet(GameObject bulletPrefab)
     {
         //Creates a new bullet at  the bullet spawner and grabs it's bullet controller script
-        GameObject projectile = Instantiate(bulletPrefab, playerTrans);
+        GameObject projectile = Instantiate(bulletPrefab, playerTrans.position, Quaternion.identity);
 
         //Adds the bullets to a pooled list to activate/deactivate and returns that bullet
         projectilePool.Add(projectile);

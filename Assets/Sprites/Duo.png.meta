@@ -1,0 +1,792 @@
+fileFormatVersion: 2
+guid: 321cca633a42e7b4da3be080b3603506
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9181246561390569501
+    second: Duo_Base
+  - first:
+      213: -8536842836118472245
+    second: Duo_Idle0
+  - first:
+      213: 4725826331620796114
+    second: Duo_Idle1
+  - first:
+      213: -2129728992195215863
+    second: Duo_Walk0
+  - first:
+      213: 6015940753941517816
+    second: Duo_Walk1
+  - first:
+      213: 3962643051851663850
+    second: Duo_Walk2
+  - first:
+      213: 8453615726198486422
+    second: Duo_Walk3
+  - first:
+      213: -4656429820694451713
+    second: Duo_Ability0
+  - first:
+      213: -3959192025083417241
+    second: Duo_8
+  - first:
+      213: 4344485379737754430
+    second: Duo_9
+  - first:
+      213: 6030675193146197429
+    second: Duo_10
+  - first:
+      213: 510072536428405307
+    second: Duo_Jump0
+  - first:
+      213: -4949442317664777064
+    second: Duo_Jump1
+  - first:
+      213: -93035720394785851
+    second: Duo_Jump2
+  - first:
+      213: -9188144039509572754
+    second: Duo_Ability1
+  - first:
+      213: 5584356443305331625
+    second: Duo_Death0
+  - first:
+      213: -7300780282436770872
+    second: Duo_Death1
+  - first:
+      213: -1092203319096107179
+    second: Duo_Death2
+  - first:
+      213: -382131106287768025
+    second: Duo_Death3
+  - first:
+      213: 3310892956451139660
+    second: Duo_Death4
+  - first:
+      213: 4475502704733488081
+    second: Duo_Death5
+  - first:
+      213: 684345835618750843
+    second: Duo_Ability2
+  - first:
+      213: -3539810434852202199
+    second: Duo_Attack0
+  - first:
+      213: 8097038194281882267
+    second: Duo_Attack1
+  - first:
+      213: -7703239095141764702
+    second: Duo_Attack2
+  - first:
+      213: -166138964890032042
+    second: Duo_Attack3
+  - first:
+      213: 3126185181645534339
+    second: Duo_Attack4
+  - first:
+      213: 1145086990588588405
+    second: Duo_Attack5
+  - first:
+      213: -6175852253162794048
+    second: Duo_Attack6
+  - first:
+      213: 5576810310322446409
+    second: Duo_29
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Duo_Base
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1826fe6a175a6f70800000000000000
+      internalID: 9181246561390569501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Idle0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc9f1d1bbaa078980800000000000000
+      internalID: -8536842836118472245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Idle1
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6e1769202859140800000000000000
+      internalID: 4725826331620796114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Walk0
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90e7a50f3cea172e0800000000000000
+      internalID: -2129728992195215863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Walk1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f5da7ced3aec7350800000000000000
+      internalID: 6015940753941517816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Walk2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae9c9455cd22ef630800000000000000
+      internalID: 3962643051851663850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Walk3
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69577bbb6b6415570800000000000000
+      internalID: 8453615726198486422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Ability0
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 352.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff9a8f7bfb9016fb0800000000000000
+      internalID: -4656429820694451713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Jump0
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 235.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b326f77f444241700800000000000000
+      internalID: 510072536428405307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Jump1
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 235.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89c0e437f6c005bb0800000000000000
+      internalID: -4949442317664777064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Jump2
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 235.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cb3276518875bef0800000000000000
+      internalID: -93035720394785851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Ability1
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 235.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e63c8eb4da72d7080800000000000000
+      internalID: -9188144039509572754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Death0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9abc066199e9f7d40800000000000000
+      internalID: 5584356443305331625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Death1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c32e2aa30b6eaa90800000000000000
+      internalID: -7300780282436770872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Death2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55f16c63ed6b7d0f0800000000000000
+      internalID: -1092203319096107179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Death3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72e271098c562baf0800000000000000
+      internalID: -382131106287768025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Death4
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40fc9e1a97a2fd20800000000000000
+      internalID: 3310892956451139660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Death5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d380fa6ffd2c1e30800000000000000
+      internalID: 4475502704733488081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Ability2
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 118.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b71d29369e84f7900800000000000000
+      internalID: 684345835618750843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 929d96a0a2110eec0800000000000000
+      internalID: -3539810434852202199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack1
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9221f676557e5070800000000000000
+      internalID: 8097038194281882267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack2
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a17c224bd8981590800000000000000
+      internalID: -7703239095141764702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack3
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 658e06edd71c1bdf0800000000000000
+      internalID: -166138964890032042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack4
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38472160cd0726b20800000000000000
+      internalID: 3126185181645534339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack5
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57134fe0d8a24ef00800000000000000
+      internalID: 1145086990588588405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_Attack6
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 1.5
+        width: 117.5
+        height: 117.5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c39fe8c817fa4aa0800000000000000
+      internalID: -6175852253162794048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

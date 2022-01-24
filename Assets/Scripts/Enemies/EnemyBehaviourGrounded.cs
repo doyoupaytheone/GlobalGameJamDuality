@@ -80,7 +80,7 @@ public class EnemyBehaviourGrounded : MonoBehaviour
         for (int i = 0; i < enemiesToDamage.Length; i++)
         {
             if (enemiesToDamage[i].gameObject.CompareTag("Player"))
-                enemiesToDamage[i].GetComponent<HealthDisplay>().ChangeHealth(-attackPower);
+                enemiesToDamage[i].GetComponent<HealthController>().ChangeHealth(-attackPower);
         }
     }
 

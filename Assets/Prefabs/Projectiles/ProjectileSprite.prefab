@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1773662359266586903}
   m_Layer: 0
   m_Name: ProjectileSprite
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -122,6 +122,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67fa1b60dac54cc48b709472886e205b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 50
   maxDistance: 15
   damagePower: 25

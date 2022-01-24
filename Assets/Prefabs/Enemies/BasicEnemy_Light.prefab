@@ -318,12 +318,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7500398243432499404}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 972c4d7025b2edc4bb2e57d7e7240dcf, type: 3}
+  m_Script: {fileID: 11500000, guid: c56b6cce67f1df44493c6dcc977e1d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 7500398244497954659}
   maxHealth: 400
   currentHealth: 400
+  isLightEnemy: 1
 --- !u!114 &7500398243432499403
 MonoBehaviour:
   m_ObjectHideFlags: 0

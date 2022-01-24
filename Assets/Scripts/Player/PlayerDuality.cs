@@ -16,8 +16,13 @@ public class PlayerDuality : MonoBehaviour
     public bool isInLightMode = false;
 
     private SpriteRenderer background;
+    private Animator animator;
 
-    private void Awake() => background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
+    private void Awake()
+    {
+        background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+    }
 
     private void Start()
     {
@@ -67,6 +72,8 @@ public class PlayerDuality : MonoBehaviour
     {
         if (Input.GetKeyDown(PlayerPrefData.Interact))
         {
+            if (animator != null) animator.SetTrigger("ability"); //Plays the ability animation
+
             //Toggles the appropriate world objects
             darkObjects.SetActive(isInLightMode);
             lightObjects.SetActive(!isInLightMode);
