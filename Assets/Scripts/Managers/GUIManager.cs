@@ -4,7 +4,9 @@ using UnityEngine;
 public class GUIManager : MonoBehaviour
 {
     [SerializeField] private CanvasFadeEffect pauseMenu;
-    
+    [SerializeField] private CanvasFadeEffect maxDarkness;
+    [SerializeField] private CanvasFadeEffect maxLight;
+
     private void Update()
     {
         //Pauses the game if the escape key is pressed
@@ -15,6 +17,12 @@ public class GUIManager : MonoBehaviour
 
     //Toggles the visibility of a canvas
     public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0);
+
+    //Allows outside scripts to toggle the max darkness image
+    public void ToggleMaxDarkness() => ToggleMenu(maxDarkness);
+
+    //Allows outside scripts to toggle the max light image
+    public void ToggleMaxLight() => ToggleMenu(maxLight);
 
     //Tells the GameManager to exit the game entirely
     public void ExitGame() => GameManager.Instance.ExitGame();

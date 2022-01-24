@@ -115,8 +115,8 @@ public class PlayerCombat : MonoBehaviour
         if (animator != null) animator.SetTrigger("attack"); //Plays the attack animation
 
         int dualityDamage; //Stores a calculation for damage depending on the current duality time
-        if (playerDuality.dualityTimer == 0) dualityDamage = (int)(secondaryAttackDamage * 0.05f); //Sets normal damage
-        else dualityDamage = (int)(secondaryAttackDamage * playerDuality.dualityTimer * 0.05f); //Sets damage depending on duality timer
+        if (playerDuality.dualityTimer == 0) dualityDamage = (int)(secondaryAttackDamage * 0.025f); //Sets normal damage
+        else dualityDamage = (int)(secondaryAttackDamage * playerDuality.dualityTimer * 0.025f); //Sets damage depending on duality timer
 
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
 

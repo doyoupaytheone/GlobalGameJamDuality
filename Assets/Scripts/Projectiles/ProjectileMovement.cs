@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class ProjectileMovement : MonoBehaviour
 {
-    public float speed = 10;
+    public float speed = 40;
     public float maxDistance = 0.2f;
     public int damagePower = 25;
 
@@ -24,6 +24,8 @@ public class ProjectileMovement : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         var health = collision.GetComponent<HealthController>();
-        if (health && !collision.CompareTag("Player")) health.ChangeHealth(-damagePower);
+        if (collision.CompareTag("Enemy")) health.ChangeHealth(-damagePower);
+        
+        if (!collision.CompareTag("Player")) this.gameObject.SetActive(false);
     }
 }

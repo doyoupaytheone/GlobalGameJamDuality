@@ -64,7 +64,7 @@ Transform:
   m_GameObject: {fileID: 4796839457928132000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 44460739}
   m_Father: {fileID: 0}
@@ -111,7 +111,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 50
   m_Sprite: {fileID: 9181246561390569501, guid: 321cca633a42e7b4da3be080b3603506, type: 3}
-  m_Color: {r: 0.6886792, g: 0.6886792, b: 0.6886792, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -153,8 +153,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10271921, y: -0.07421746}
-  m_Size: {x: 0.28264904, y: 0.35674164}
+  m_Offset: {x: -0.23503909, y: 0.01703763}
+  m_Size: {x: 0.6111674, y: 0.76738995}
   m_Direction: 0
 --- !u!61 &5116038683203663620
 BoxCollider2D:
@@ -169,18 +169,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.10608715, y: -0.2641257}
+  m_Offset: {x: -0.22243729, y: -0.35081798}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5875, y: 0.5875}
+    oldSize: {x: 1.175, y: 1.175}
     newSize: {x: 1, y: 2}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.19430542, y: 0.052332297}
+  m_Size: {x: 0.34487635, y: 0.088834405}
   m_EdgeRadius: 0
 --- !u!50 &4796839457928132001
 Rigidbody2D:
@@ -232,12 +232,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5f9c7daf1649914095b0baa1e9f85ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 7.5
-  moveSmoothing: 0.075
-  fallDistanceMultiplier: 0.75
-  fallAccelerationMultiplier: 1.5
+  movementSpeed: 6.5
+  moveSmoothing: 0.05
+  fallDistanceMultiplier: 0.7
+  fallAccelerationMultiplier: 1.85
   maxJumpsAllowed: 2
-  jumpForce: 180
+  jumpForce: 150
   isGrounded: 0
 --- !u!114 &4796839457928132010
 MonoBehaviour:
@@ -251,12 +251,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4352ce9af02bc67419627c6d414b80e5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  primaryAttackCooldown: 0.25
-  primaryAttackDamage: 20
+  primaryAttackCooldown: 0.5
+  primaryAttackDamage: 10
   swordProjectile: {fileID: 5343145964411688975, guid: 99fc7abafb9fc704992971a27448217a, type: 3}
-  secondaryAttackCooldown: 0.25
-  attackRange: 1
-  secondaryAttackDamage: 20
+  secondaryAttackCooldown: 0.65
+  attackRange: 1.5
+  secondaryAttackDamage: 50
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64
@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16c8fab5c2a562242b61bd12b7dcdc9a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDualityTime: 100
+  maxDualityTime: 200
   darkSlider: {fileID: 0}
   lightSlider: {fileID: 0}
   darkObjects: {fileID: 0}
@@ -282,6 +282,7 @@ MonoBehaviour:
   darkEnemies:
   - {fileID: 0}
   lightEnemies:
+  - {fileID: 0}
   - {fileID: 0}
   dualityTimer: 0
   isInLightMode: 1

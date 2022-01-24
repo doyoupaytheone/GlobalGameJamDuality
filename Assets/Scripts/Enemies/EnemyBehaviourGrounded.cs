@@ -10,6 +10,9 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     [SerializeField] private int attackPower = 50;
 
     private Transform enemyTrans;
+    private RectTransform enemyHealthTrans;
+    private float startingScale;
+    private float startingHealthScale;
     private bool canAttack = true;
     private bool isFacingRight;
     private bool isStopped;
@@ -17,12 +20,16 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     private void Awake()
     {
         enemyTrans = GetComponent<Transform>();
+        enemyHealthTrans = GetComponentInChildren<RectTransform>();
     }
 
-    private void FixedUpdate()
+    private void Start()
     {
-        CheckEnvironment();
+        startingScale = enemyTrans.localScale.x; //Sets the local scale of the enemy for reference
+        if (enemyHealthTrans) startingHealthScale = enemyHealthTrans.localScale.x; //Sets the local scaled of the enemy health for reference
     }
+
+    private void FixedUpdate() => CheckEnvironment();
 
     private void Update()
     {
@@ -69,6 +76,16 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     private void Flip()
     {
         isFacingRight = !isFacingRight;
+        if (isFacingRight)
+        {
+            enemyTrans.localScale = new Vector3(startingScale, startingScale, 1);
+            if (enemyHealthTrans) enemyHealthTrans.localScale = new Vector3(startingHealthScale, startingHealthScale, 1);
+        }
+        else
+        {
+            enemyTrans.localScale = new Vector3(-startingScale, startingScale, 1);
+            if (enemyHealthTrans) enemyHealthTrans.localScale = new Vector3(-startingHealthScale, startingHealthScale, 1);
+        }
     }
 
     private void Attack()

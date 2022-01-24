@@ -16,11 +16,13 @@ public class PlayerDuality : MonoBehaviour
     public bool isInLightMode = false;
 
     private SpriteRenderer background;
+    private GUIManager gui;
     private Animator animator;
 
     private void Awake()
     {
         background = GameObject.FindGameObjectWithTag("Background").GetComponent<SpriteRenderer>();
+        gui = FindObjectOfType<GUIManager>();
         animator = GetComponent<Animator>();
     }
 
@@ -32,8 +34,6 @@ public class PlayerDuality : MonoBehaviour
 
         //Sets the Obsidian world false first when level loads
         darkObjects.SetActive(false);
-        ToggleEnemyVisibility(darkEnemies, false);
-        ToggleEnemyVisibility(lightEnemies, true);
 
         InvokeRepeating("AddTimeToTimer", 0.1f, 0.1f); //Repeats method every 0.1 seconds
     }
@@ -60,6 +60,14 @@ public class PlayerDuality : MonoBehaviour
             dualityTimer++; //Updates the timer
             UpdateHudDisplay(); //Updates the display
         }
+        else if (this.gameObject.activeSelf && dualityTimer == maxDualityTime)
+        {
+            dualityTimer++; //Pushes timer past limit so this only triggers once
+
+            //Toggles the appropriate max indicator type
+            if (isInLightMode) gui.ToggleMaxLight();
+            else gui.ToggleMaxDarkness();
+        }
     }
 
     private void UpdateHudDisplay()
@@ -84,6 +92,13 @@ public class PlayerDuality : MonoBehaviour
 
             //Toggles the background color
             background.enabled = isInLightMode;
+
+            //Checks to be sure gui indicators are reset
+            if (dualityTimer == maxDualityTime + 1)
+            {
+                if (isInLightMode) gui.ToggleMaxLight();
+                else gui.ToggleMaxDarkness();
+            }
 
             ToggleType();
         }
