@@ -4,6 +4,7 @@ using UnityEngine;
 public class GUIManager : MonoBehaviour
 {
     [SerializeField] private CanvasFadeEffect pauseMenu;
+    [SerializeField] private CanvasFadeEffect deathMenu;
     [SerializeField] private CanvasFadeEffect maxDarkness;
     [SerializeField] private CanvasFadeEffect maxLight;
 
@@ -23,6 +24,9 @@ public class GUIManager : MonoBehaviour
 
     //Allows outside scripts to toggle the max light image
     public void ToggleMaxLight() => ToggleMenu(maxLight);
+
+    //Allows outside scripts to toggle the death menu
+    public void ToggleDeathMenu() => ToggleMenu(deathMenu);
 
     //Tells the GameManager to exit the game entirely
     public void ExitGame() => GameManager.Instance.ExitGame();

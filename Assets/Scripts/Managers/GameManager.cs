@@ -123,8 +123,8 @@ public class GameManager : MonoSingleton<GameManager>
 
     public void PlayerHasDied()
     {
-        //Do a death effect
-        _guiManager.PauseGame();
+        Pause(true);
+        _guiManager.ToggleDeathMenu();
     }
 
     #endregion
@@ -134,6 +134,8 @@ public class GameManager : MonoSingleton<GameManager>
     //When a new scene finishes loading
     private void OnLevelWasLoaded(int level)
     {
+        if (IsFrozen) Pause(false);
+        
         FindScriptsInScene();
 
         //If going back to the main menu, reload the appropriate player prefs to be adjusted
