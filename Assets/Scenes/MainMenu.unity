@@ -593,26 +593,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 2361199597165981294, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597165981294, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597165981294, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597233599668, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597233599668, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2361199597451246663, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -621,34 +601,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1057382052}
-    - target: {fileID: 2361199597451621665, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597451621665, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597618084054, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597618084054, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597675132842, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597675132842, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199597675132842, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2361199597750758157, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -661,26 +613,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1057382052}
-    - target: {fileID: 2361199598204573179, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199598204573179, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199598252141758, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199598252141758, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199598252141758, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2361199598333573288, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -701,18 +633,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1057382052}
-    - target: {fileID: 2361199598695133652, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199598695133652, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2361199598695133652, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2361199598791677287, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -837,10 +757,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 7035006976402710019, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: delayFadeInTime
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 7974976531800469449, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -853,10 +769,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 8729157640808016886, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: delayFadeOutTime
-      value: 4
-      objectReference: {fileID: 0}
     - target: {fileID: 8824594309734421670, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -873,10 +785,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 11950980}
-    - target: {fileID: 8943953372454385441, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: delayFadeOutTime
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 9048294200940434744, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
