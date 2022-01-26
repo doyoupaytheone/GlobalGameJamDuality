@@ -23,7 +23,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - Design
   - 
   - 
   - 
@@ -44,4 +44,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Designs
+    uniqueID: 4119863543
+    locked: 0
+  - name: New Layer
+    uniqueID: 3008528209
     locked: 0
