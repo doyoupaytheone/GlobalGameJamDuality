@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7240605564434620059}
   - component: {fileID: 7240605564434620058}
-  - component: {fileID: 7240605564434620057}
+  - component: {fileID: 7443401278562472095}
+  - component: {fileID: 1213324048}
   m_Layer: 0
   m_Name: ObsidianCore
   m_TagString: Untagged
@@ -83,7 +84,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &7240605564434620057
+--- !u!114 &7443401278562472095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240605564434620056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6feac0d5dd48249be9ec9196f244dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!58 &1213324048
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -98,4 +111,4 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.53333336
