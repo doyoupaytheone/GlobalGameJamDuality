@@ -2,15 +2,32 @@ Asset Attribution
 
 Sprites:
 	Benza by megupets
-	https://opengameart.org/content/benza	
-	
+	https://opengameart.org/content/benza		
 
 Audio:
 	Classical_Loop.mp3 by 4barrelcarb
 	https://freesound.org/people/4barrelcarb/sounds/365378/
 
+	Late Jazz Piano.wav by szegvari
+	https://freesound.org/people/szegvari/sounds/570347/?page=2#comment
+
+	Piano and drums.wav by Nadia4Sound
+	https://freesound.org/people/Nadia4Sound/sounds/441520/
+
 	UI Button Click by benzix2
 	https://freesound.org/people/benzix2/sounds/467951/
+
+	Triangle_Open_01 by cabled_mess
+	https://freesound.org/people/cabled_mess/sounds/349501/
+
+	Hit Impact Sword 3 by Eponn
+	https://freesound.org/people/Eponn/sounds/547042/
+
+	Brasshit+05.wav by Meutecee
+	https://freesound.org/people/Meutecee/sounds/69833/
+
+	Throwing / Whip Effect by denao270
+	https://freesound.org/people/denao270/sounds/346373/
 
 Font:
 

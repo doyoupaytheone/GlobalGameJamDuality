@@ -485,6 +485,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 171304414}
     m_Modifications:
+    - target: {fileID: 53707704450496871, guid: ba6bfe7f700a37c45bd978fe35e60c0a, type: 3}
+      propertyPath: _musicTracks.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 53707704450496871, guid: ba6bfe7f700a37c45bd978fe35e60c0a, type: 3}
+      propertyPath: _musicTracks.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 869bc51d3bdf1624ca83b76fe770189e, type: 3}
+    - target: {fileID: 53707704450496871, guid: ba6bfe7f700a37c45bd978fe35e60c0a, type: 3}
+      propertyPath: _musicTracks.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 869bc51d3bdf1624ca83b76fe770189e, type: 3}
+    - target: {fileID: 3448048317280586811, guid: ba6bfe7f700a37c45bd978fe35e60c0a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 869bc51d3bdf1624ca83b76fe770189e, type: 3}
     - target: {fileID: 6070669810645413936, guid: ba6bfe7f700a37c45bd978fe35e60c0a, type: 3}
       propertyPath: m_RootOrder
       value: 2

@@ -1,6 +1,7 @@
 //Created by Justin Simmons
 //Edited by Akeem Roberts
 
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,21 +9,29 @@ public class PlayerCombat : MonoBehaviour
 {
     //Variables for primary attack (Shooting)
     [Header("Primary Attack")]
-    private float primaryAttackCooldownTimer;
-    private bool canAttackPrimary = true;
     [SerializeField] private float primaryAttackCooldown;
     [SerializeField] private int primaryAttackDamage;
     [SerializeField] private GameObject swordProjectile;
+    private float primaryAttackCooldownTimer;
+    private bool canAttackPrimary = true;
 
     // All variables below is for secondary attack (Meelee) 
     [Header("Secondary Attack")]
-    private float secondaryAttackCooldownTimer;
-    private bool canAttackSecondary = true;
     [SerializeField] private float secondaryAttackCooldown;
     [SerializeField] private float attackRange;
     [SerializeField] private int secondaryAttackDamage;
     [SerializeField] private LayerMask whatIsEnemies;
     [SerializeField] private Transform attackPos;
+    private float secondaryAttackCooldownTimer;
+    private bool canAttackSecondary = true;
+
+    [Header("Sounds")]
+    [SerializeField] private AudioSource playerAudio;
+    [SerializeField] private AudioClip throwSoundClip;
+    [SerializeField] private AudioClip hitSoundClip;
+
+    [Header("Other Attributes")]
+    public bool attackTypeIsLight; // Bool that changes attack type depending on if in light or dark mode
 
     private Transform playerTrans;
     private Animator animator;
@@ -31,7 +40,6 @@ public class PlayerCombat : MonoBehaviour
     private List<GameObject> projectilePool = new List<GameObject>();
     private Quaternion lastClickAngle = Quaternion.identity;
 
-    public bool attackTypeIsLight; // Bool that changes attack type depending on if in light or dark mode
     private bool applyDamage;
 
     private void Awake()
@@ -99,6 +107,7 @@ public class PlayerCombat : MonoBehaviour
         canAttackPrimary = false;
 
         if (animator != null) animator.SetTrigger("projectileAttack"); //Plays the projectile attack animation
+        if (playerAudio != null) PlayCombatAudio(throwSoundClip); //Plays the projectile attack audio clip
 
         //Finds the direction of the mouse click, calculates the angle between it and the player and makes a proper rotation
         var mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -111,25 +120,9 @@ public class PlayerCombat : MonoBehaviour
 
     private void SecondaryAttack() // Enemies require layer mask for this attack 
     {
-        //Toggles to can't attack
-        canAttackSecondary = false;
-
+        canAttackSecondary = false; //Toggles to can't attack
         if (animator != null) animator.SetTrigger("attack"); //Plays the attack animation
-
-        int dualityDamage; //Stores a calculation for damage depending on the current duality time
-        if (playerDuality.dualityTimer == 0) dualityDamage = (int)(secondaryAttackDamage * 0.025f); //Sets normal damage
-        else dualityDamage = (int)(secondaryAttackDamage * playerDuality.dualityTimer * 0.025f); //Sets damage depending on duality timer
-
-        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
-
-        for (int i = 0; i < enemiesToDamage.Length; i++)
-            enemiesToDamage[i].GetComponent<HealthController>().ChangeHealth(-dualityDamage);
-    }
-
-    private void OnDrawGizmosSelected() //Shows attack range in scene view
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+        StartCoroutine(WaitToApplyDamageEffects(0.275f)); //Waits a second to let the animation "catch up" to the damage effects
     }
 
     private GameObject CreateBullet(GameObject bulletPrefab)
@@ -174,5 +167,35 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-   
+    private void PlayCombatAudio(AudioClip sound)
+    {
+        if (!playerAudio.isPlaying)
+        {
+            playerAudio.clip = sound;
+            playerAudio.Play();
+        }
+    }
+
+    private IEnumerator WaitToApplyDamageEffects(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+
+        int dualityDamage; //Stores a calculation for damage depending on the current duality time
+        if (playerDuality.dualityTimer == 0) dualityDamage = (int)(secondaryAttackDamage * 0.025f); //Sets normal damage
+        else dualityDamage = (int)(secondaryAttackDamage * playerDuality.dualityTimer * 0.025f); //Sets damage depending on duality timer
+
+        Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(attackPos.position, attackRange, whatIsEnemies);
+
+        for (int i = 0; i < enemiesToDamage.Length; i++)
+        {
+            enemiesToDamage[i].GetComponent<HealthController>().ChangeHealth(-dualityDamage);
+            if (playerAudio != null) PlayCombatAudio(hitSoundClip); //Plays the projectile attack audio clip if an enemy is "hit"
+        }
+    }
+
+    private void OnDrawGizmosSelected() //Shows attack range in scene view
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPos.position, attackRange);
+    }
 }
