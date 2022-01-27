@@ -98,6 +98,8 @@ public class PlayerCombat : MonoBehaviour
         //Toggles to can't attack
         canAttackPrimary = false;
 
+        if (animator != null) animator.SetTrigger("projectileAttack"); //Plays the projectile attack animation
+
         //Finds the direction of the mouse click, calculates the angle between it and the player and makes a proper rotation
         var mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var angle = Mathf.Atan2(mp.y - playerTrans.position.y, mp.x - playerTrans.position.x) * 180 / Mathf.PI; 
