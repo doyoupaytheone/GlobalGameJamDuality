@@ -44,7 +44,7 @@ public class MenuManager : MonoBehaviour
     private void Start() => ResetResolutionOptions();
 
     //Tells the game manager to begin the game
-    public void StartGame(int slotIndex) => GameManager.Instance.ChangeScene(slotIndex);
+    public void StartGame(int slotIndex) => GameManager.Instance.ToFurthestScene(slotIndex);
 
     //Tells the game manager to quit the game
     public void ExitGame() => GameManager.Instance.ExitGame();
@@ -150,7 +150,7 @@ public class MenuManager : MonoBehaviour
         _resolutionDropdown.RefreshShownValue();
     }
 
-    public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0);
+    public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0.75f);
 
     //Resets the current values for the custom player inputs
     public void ResetCustomControls()

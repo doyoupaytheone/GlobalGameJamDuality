@@ -159,7 +159,17 @@ public class GameManager : MonoSingleton<GameManager>
     }
 
     //Changes the scene to a particular index
-    public void ChangeScene(int slotIndex)
+    public void ChangeScene(int sceneIndex)
+    {
+        SavePrefs();
+        SaveGame();
+
+        //Begins the transition to the next scene
+        StartCoroutine(TransitionToNextScene(sceneIndex));
+    }
+
+    //Changes the scene to the furthest scene the player has made it to
+    public void ToFurthestScene(int slotIndex)
     {
         SavePrefs();
         SaveGame();

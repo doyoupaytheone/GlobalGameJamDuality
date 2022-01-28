@@ -212,7 +212,7 @@ GameObject:
   - component: {fileID: 92532223}
   m_Layer: 10
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Static
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1216,14 +1216,6 @@ PrefabInstance:
       propertyPath: lightObjects
       value: 
       objectReference: {fileID: 554079241}
-    - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
-      propertyPath: darkEnemies.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
-      propertyPath: lightEnemies.Array.size
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: darkEnemies.Array.data[0]
       value: 
@@ -3278,14 +3270,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 893028815, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 893028815, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 427653386044715124, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3330,22 +3314,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1175892727}
-    - target: {fileID: 8930631996695639359, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8930631996695639359, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8930631998357362951, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8930631998357362951, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 9168386503196340601, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_RootOrder
       value: 2

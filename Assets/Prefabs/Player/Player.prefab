@@ -333,7 +333,7 @@ MonoBehaviour:
   movementSpeed: 6.5
   moveSmoothing: 0.05
   fallDistanceMultiplier: 0.7
-  fallAccelerationMultiplier: 1.85
+  fallAccelerationMultiplier: 1.4
   maxJumpsAllowed: 2
   jumpForce: 150
   isGrounded: 0
@@ -352,6 +352,9 @@ MonoBehaviour:
   primaryAttackCooldown: 0.5
   primaryAttackDamage: 10
   swordProjectile: {fileID: 5343145964411688975, guid: 99fc7abafb9fc704992971a27448217a, type: 3}
+  whatAreStatics:
+    serializedVersion: 2
+    m_Bits: 1024
   secondaryAttackCooldown: 0.65
   attackRange: 1.5
   secondaryAttackDamage: 50
@@ -382,7 +385,15 @@ MonoBehaviour:
   lightObjects: {fileID: 0}
   darkEnemies:
   - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   lightEnemies:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   dualityTimer: 0
@@ -399,5 +410,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d1ff984aaef37f4883438cb0cf528eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  whiteBlackCores: 0
-  coreAmountText: {fileID: 0}
+  blackCores: 0
+  whiteCores: 0

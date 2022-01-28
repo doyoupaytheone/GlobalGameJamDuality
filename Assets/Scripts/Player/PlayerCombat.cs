@@ -11,7 +11,7 @@ public class PlayerCombat : MonoBehaviour
     [Header("Primary Attack")]
     [SerializeField] private float primaryAttackCooldown;
     [SerializeField] private int primaryAttackDamage;
-    [SerializeField] private GameObject swordProjectile;
+    [SerializeField] private GameObject projectile;
     private float primaryAttackCooldownTimer;
     private bool canAttackPrimary = true;
 
@@ -40,8 +40,6 @@ public class PlayerCombat : MonoBehaviour
     private List<GameObject> projectilePool = new List<GameObject>();
     private Quaternion lastClickAngle = Quaternion.identity;
 
-    private bool applyDamage;
-
     private void Awake()
     {
         playerTrans = GetComponent<Transform>();
@@ -51,7 +49,7 @@ public class PlayerCombat : MonoBehaviour
 
     private void Start()
     {
-        InitializeWeapon(swordProjectile);
+        InitializeWeapon(projectile);
     }
 
     private void Update()
@@ -60,7 +58,6 @@ public class PlayerCombat : MonoBehaviour
         {
             AttackTypeCheck();
             CheckAttackTimers();
-            //ApplyDamage();
 
             if (canAttackPrimary && Input.GetKeyDown(PlayerPrefData.PrimaryAttack)) PrimaryAttack();
             if (canAttackSecondary && Input.GetKeyDown(PlayerPrefData.SecondaryAttack)) SecondaryAttack();
@@ -106,9 +103,6 @@ public class PlayerCombat : MonoBehaviour
         //Toggles to can't attack
         canAttackPrimary = false;
 
-        if (animator != null) animator.SetTrigger("projectileAttack"); //Plays the projectile attack animation
-        if (playerAudio != null) PlayCombatAudio(throwSoundClip); //Plays the projectile attack audio clip
-
         //Finds the direction of the mouse click, calculates the angle between it and the player and makes a proper rotation
         var mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         var angle = Mathf.Atan2(mp.y - playerTrans.position.y, mp.x - playerTrans.position.x) * 180 / Mathf.PI; 
@@ -142,6 +136,9 @@ public class PlayerCombat : MonoBehaviour
         {
             if (projectile.activeSelf == false)
             {
+                if (animator != null) animator.SetTrigger("projectileAttack"); //Plays the projectile attack animation
+                if (playerAudio != null) PlayCombatAudio(throwSoundClip); //Plays the projectile attack audio clip
+
                 projectile.transform.position = playerTrans.position;
                 projectile.transform.rotation = lastClickAngle;
                 var pm = projectile.GetComponent<ProjectileMovement>();

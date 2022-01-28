@@ -60,7 +60,7 @@ public class HealthController : MonoBehaviour
             if (e1 != null)
             {
                 e1.isDead = true;
-                StartCoroutine(WaitForDeathAnimationToFinish(0.5f));
+                StartCoroutine(WaitForDeathAnimationToFinish(0.75f));
             }
 
             var e2 = GetComponent<EnemyBehaviourFlying>();

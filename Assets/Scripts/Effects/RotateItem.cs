@@ -1,13 +1,11 @@
-//Created by Justin Simmons
-
 using UnityEngine;
 
 public class RotateItem : MonoBehaviour
 {
-    [SerializeField] private bool isRotatingX;
-    [SerializeField] private bool isRotatingY;
-    [SerializeField] private bool isRotatingZ;
-    [SerializeField] private float rotationSpeed;
+    public bool isRotatingX;
+    public bool isRotatingY;
+    public bool isRotatingZ;
+    public float rotationSpeed;
 
     private Transform thisTrans;
 
