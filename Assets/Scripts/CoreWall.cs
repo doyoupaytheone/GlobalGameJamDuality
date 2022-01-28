@@ -8,6 +8,7 @@ public class CoreWall : MonoBehaviour
 
     public int coresRequired;
     private PlayerCollects playerCollects;
+    public SpriteRenderer lockSprite;
     public GameObject wall;
     public GameObject player;
 
@@ -56,7 +57,17 @@ public class CoreWall : MonoBehaviour
 
     IEnumerator WallFade(float aValue, float fadeTime)
     {
-        float alpha = spriteRender.color.a;
+        float alpha = lockSprite.color.a;
+
+        for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / fadeTime)
+        {
+            Color newColor = new Color(lockSprite.color.r, lockSprite.color.g, lockSprite.color.b, Mathf.Lerp(alpha, aValue, t));
+            lockSprite.color = newColor;
+            yield return null;
+            Debug.Log("Lock fading");
+        }
+
+        alpha = spriteRender.color.a;
 
         for (float t = 0.0f; t < 1.0f; t += Time.deltaTime / fadeTime)
         {
@@ -66,10 +77,7 @@ public class CoreWall : MonoBehaviour
             Debug.Log("Wall fading");
         }
 
-        if (destroyGOWall)
-            Destroy(gameObject);
-        Debug.Log("Wall destroyed");
-        
+        if (destroyGOWall) Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

@@ -163,11 +163,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coresRequired: 1
+  lockSprite: {fileID: 5756107586396161125}
   wall: {fileID: 3124099411264548237}
   player: {fileID: 0}
   fadeDelay: 3
   alphaValue: 0
-  destroyGOWall: 0
+  destroyGOWall: 1
   CoresRequired: {fileID: 0}
   CoresRequiredText: {fileID: 0}
   spriteRender: {fileID: 3124099411264548225}
