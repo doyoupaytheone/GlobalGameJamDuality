@@ -5,6 +5,8 @@ public class ColorCores : MonoBehaviour
 {
     private PlayerCollects playerCollects;
     // public GameObject player;
+
+    public bool isLightCore;
    
     void awake()
     {
@@ -30,7 +32,7 @@ public class ColorCores : MonoBehaviour
         if (other.tag == "Player") // Player collides with core and core will disappear
         {
             playerCollects = other.gameObject.GetComponent<PlayerCollects>();
-            playerCollects.whiteBlackCores += 1;
+            playerCollects.AddCore(isLightCore);
             Destroy(this.gameObject);
         }
 

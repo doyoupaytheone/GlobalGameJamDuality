@@ -46,7 +46,7 @@ public class CoreWall : MonoBehaviour
     {
         playerCollects = player.gameObject.GetComponent<PlayerCollects>();
         
-        if (playerCollects.whiteBlackCores == coresRequired )
+        if (playerCollects.whiteCores + playerCollects.blackCores == coresRequired )
         {
             StartCoroutine(WallFade(alphaValue, fadeDelay));
             Debug.Log("Cores need acquired");
@@ -76,7 +76,7 @@ public class CoreWall : MonoBehaviour
     {
         if(other.name == "Player")
         {
-            if (playerCollects.whiteBlackCores != coresRequired)
+            if (playerCollects.whiteCores + playerCollects.blackCores != coresRequired)
             {
                 CoresRequired.enabled = true;
                 CoresRequiredText.text = "Cores needed to proceed " + coresRequired.ToString();

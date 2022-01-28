@@ -26,7 +26,7 @@ public class CoreCheck : MonoBehaviour
         {
             Debug.Log("CoreCheck");
             playerCollects = other.gameObject.GetComponent<PlayerCollects>();
-            if (playerCollects.whiteBlackCores == coreWall.coresRequired)
+            if (playerCollects.whiteCores + playerCollects.blackCores == coreWall.coresRequired)
             {
                 Debug.Log("Bool True");
                // coreWall.allCoresAcquired = true;
