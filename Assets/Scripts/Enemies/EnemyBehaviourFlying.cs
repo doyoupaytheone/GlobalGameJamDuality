@@ -10,16 +10,16 @@ public class EnemyBehaviourFlying : MonoBehaviour
     [SerializeField] private Transform[] navPoints;
 
     [Header("Combat")]
-    [SerializeField] private float attackRange = 7f;
-    [SerializeField] private float attackResetTime = 1.5f;
-    [SerializeField] private float attackRadomVarienceRange = 1.5f;
     [SerializeField] private int attackPower = 50;
 
     public bool isFollowingPlayer = false; //Flags that the enemy is following the player
+    public bool isDead;
 
     private Transform enemyTrans;
     private Transform playerTrans;
     private RectTransform enemyHealthTrans;
+    private Animator animator;
+    private Rigidbody2D rb;
     private Vector2 targetPos; //Targeting points to follow left and right of player 
     private Vector2 waypointTargetPos;
     private Vector2 zeroVelocity = Vector2.zero;
@@ -33,6 +33,8 @@ public class EnemyBehaviourFlying : MonoBehaviour
         enemyTrans = GetComponent<Transform>();
         playerTrans = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
         enemyHealthTrans = GetComponentInChildren<RectTransform>();
+        animator = GetComponent<Animator>();
+        rb = GetComponent<Rigidbody2D>();
     }
 
     private void Start()
@@ -46,9 +48,9 @@ public class EnemyBehaviourFlying : MonoBehaviour
     //Uses the position of the player to smoothly move the enemy towards it's target
     private void Update()
     {
-        if (GameManager.Instance.IsFrozen) return;
+        if (GameManager.Instance.IsFrozen || isDead) return;
 
-        CheckPlayerDistance(); //Calcuates the distance from the player and decides if the enemy will keep following
+        var dist = CheckPlayerDistance(); //Calcuates the distance from the player and decides if the enemy will keep following
 
         if (isFollowingPlayer) //If following the player
         {
@@ -60,10 +62,14 @@ public class EnemyBehaviourFlying : MonoBehaviour
         Move(); //Moves the enemy
     }
 
-    private void CheckPlayerDistance()
+    private float CheckPlayerDistance()
     {
-        if (Vector3.Distance(playerTrans.position, enemyTrans.position) < alertDistance) isFollowingPlayer = true;
+        var dist = Vector3.Distance(playerTrans.position, enemyTrans.position);
+
+        if (dist < alertDistance) isFollowingPlayer = true;
         else isFollowingPlayer = false;
+
+        return dist;
     }
 
     private void CheckIfArrived()
@@ -72,19 +78,16 @@ public class EnemyBehaviourFlying : MonoBehaviour
             waypointTargetPos = navPoints[Random.Range(0, navPoints.Length)].position;
     }
 
-    private void CalculateFollowPlayer()
-    {
-        targetPos = new Vector2(playerTrans.position.x, playerTrans.position.y + 1);
-
-        //Flips the character to the appropriate direction depending on the target position
-        if (targetPos.x > 0 && !isFacingRight) Flip();
-        else if (targetPos.x < 0 && isFacingRight) Flip();
-    }
+    private void CalculateFollowPlayer() => targetPos = new Vector2(playerTrans.position.x, playerTrans.position.y + 0.5f);
 
     private void CalculateHoverHeight() => targetPos += new Vector2(0, hoverDistance);
 
     private void Move()
     {
+        //Flips the character to the appropriate direction depending on the target position
+        if (rb.velocity.x > 0 && !isFacingRight) Flip();
+        else if (rb.velocity.x < 0 && isFacingRight) Flip();
+
         if (isFollowingPlayer)
             transform.position = Vector2.SmoothDamp(gameObject.transform.position, targetPos, ref zeroVelocity, dampTime);
         else
@@ -104,11 +107,6 @@ public class EnemyBehaviourFlying : MonoBehaviour
             enemyTrans.localScale = new Vector3(-startingScale, startingScale, 1);
             if (enemyHealthTrans) enemyHealthTrans.localScale = new Vector3(-startingHealthScale, startingHealthScale, 1);
         }
-    }
-
-    private void Attack()
-    {
-        
     }
 
     private void OnCollisionEnter(Collision collision)

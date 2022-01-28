@@ -286,11 +286,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5496725747898075111}
   - component: {fileID: 5496725747898075108}
+  - component: {fileID: 663743284}
   - component: {fileID: 5496725747898075110}
   - component: {fileID: 5496725747898075113}
   - component: {fileID: 5496725747898075112}
   - component: {fileID: 5496725747898075109}
-  - component: {fileID: 663743284}
   m_Layer: 6
   m_Name: BasicEnemy_Dark
   m_TagString: Enemy
@@ -364,6 +364,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &663743284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5496725747898075106}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1e3f1751ed4f8ce4b8d07d2a437cce99, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!61 &5496725747898075110
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -441,29 +460,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  attackRange: 2.5
+  attackRange: 1.15
   attackResetTime: 1.5
   attackRadomVarienceRange: 1.5
   attackPower: 80
---- !u!95 &663743284
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5496725747898075106}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 17fb94722463524439f9d4420c6fbe7d, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  isDead: 0
 --- !u!1 &5496725748382382663
 GameObject:
   m_ObjectHideFlags: 0
