@@ -2182,7 +2182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 8105364098890919055, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
+  m_Sprite: {fileID: -398370253970834157, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2391,7 +2391,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5376358965234703051, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
+  m_Sprite: {fileID: 8767040975081434568, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2660,8 +2660,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -210, y: -70}
-  m_SizeDelta: {x: 169, y: 168}
+  m_AnchoredPosition: {x: -195, y: -84}
+  m_SizeDelta: {x: 138, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7590335796880442343
 CanvasRenderer:
@@ -2691,7 +2691,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -7151958888795693489, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
+  m_Sprite: {fileID: 5740453210667488706, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3712,7 +3712,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -5376358965234703051, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
+  m_Sprite: {fileID: 8767040975081434568, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4879,8 +4879,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 220, y: -70}
-  m_SizeDelta: {x: 211, y: 125}
+  m_AnchoredPosition: {x: 200, y: -95}
+  m_SizeDelta: {x: 160, y: 102}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3432806312177734256
 CanvasRenderer:
@@ -4910,7 +4910,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5740453210667488706, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
+  m_Sprite: {fileID: -315880046495847483, guid: a3e17ba4e4d740a4f94a986994261eb0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

@@ -4,16 +4,16 @@ TextureImporter:
   internalIDToNameTable:
   - first:
       213: -7151958888795693489
-    second: GUI_MaxDark
+    second: GUI_SaveFrame
   - first:
       213: 8105364098890919055
-    second: GUI_Duality
+    second: GUI_SaveFrame
   - first:
       213: -5376358965234703051
-    second: GUI_Health
+    second: GUI_SaveFrame
   - first:
       213: 5740453210667488706
-    second: GUI_MaxLight
+    second: GUI_MaxDark
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -151,13 +151,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: GUI_MaxDark
+      name: GUI_Duality
       rect:
         serializedVersion: 2
-        x: 47
-        y: 183
-        width: 169
-        height: 168
+        x: 8
+        y: 358
+        width: 672
+        height: 107
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,13 +172,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_Duality
+      name: GUI_Health
       rect:
         serializedVersion: 2
-        x: 132
-        y: 349
-        width: 676
-        height: 107
+        x: 7
+        y: 264
+        width: 434
+        height: 88
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -193,13 +193,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_Health
+      name: GUI_SaveFrame
       rect:
         serializedVersion: 2
-        x: 251
-        y: 236
-        width: 439
-        height: 88
+        x: 465
+        y: 77
+        width: 431
+        height: 275
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,13 +214,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: GUI_MaxLight
+      name: GUI_MaxDark
       rect:
         serializedVersion: 2
-        x: 715
-        y: 219
-        width: 211
-        height: 125
+        x: 13
+        y: 163
+        width: 138
+        height: 87
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,6 +230,27 @@ TextureImporter:
       bones: []
       spriteID: 2c51697e7cf2aaf40800000000000000
       internalID: 5740453210667488706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GUI_MaxLight
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 148
+        width: 160
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6039a89fe606e6400800000000000000
+      internalID: 319298653339161350
       vertices: []
       indices: 
       edges: []
