@@ -3151,6 +3151,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1608927427, guid: 416c7300853274b4980be648749832a5, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 427653386044715124, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3166,10 +3170,6 @@ PrefabInstance:
     - target: {fileID: 738221934922120720, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_Name
       value: GUIManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 738221934922120720, guid: 416c7300853274b4980be648749832a5, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1791017508110228260, guid: 416c7300853274b4980be648749832a5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

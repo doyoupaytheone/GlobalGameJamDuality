@@ -82,12 +82,12 @@ public class CoreWall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.name == "Player")
+        if(other.tag == "Player")
         {
             if (playerCollects.whiteCores + playerCollects.blackCores != coresRequired)
             {
                 CoresRequired.enabled = true;
-                CoresRequiredText.text = "Cores needed to proceed " + coresRequired.ToString();
+                CoresRequiredText.text = "Cores Needed to Proceed: " + coresRequired.ToString();
             }
         }
        

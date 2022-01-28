@@ -96,7 +96,6 @@ public class EnemyBehaviourFlying : MonoBehaviour
 
     private void Flip()
     {
-        isFacingRight = !isFacingRight;
         if (isFacingRight)
         {
             enemyTrans.localScale = new Vector3(startingScale, startingScale, 1);
@@ -107,6 +106,8 @@ public class EnemyBehaviourFlying : MonoBehaviour
             enemyTrans.localScale = new Vector3(-startingScale, startingScale, 1);
             if (enemyHealthTrans) enemyHealthTrans.localScale = new Vector3(-startingHealthScale, startingHealthScale, 1);
         }
+
+        isFacingRight = !isFacingRight;
     }
 
     private void OnCollisionEnter(Collision collision)
