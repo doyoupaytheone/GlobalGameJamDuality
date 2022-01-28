@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ColorCores : MonoBehaviour
@@ -28,7 +27,7 @@ public class ColorCores : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.name == "Player") // Player collides with core and core will disappear
+        if (other.tag == "Player") // Player collides with core and core will disappear
         {
             playerCollects = other.gameObject.GetComponent<PlayerCollects>();
             playerCollects.whiteBlackCores += 1;
@@ -37,5 +36,9 @@ public class ColorCores : MonoBehaviour
 
     }
 
-
+    private IEnumerator WaitForSoundToPlay(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        this.gameObject.SetActive(false);
+    }
 }

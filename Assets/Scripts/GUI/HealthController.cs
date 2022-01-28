@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,10 @@ public class HealthController : MonoBehaviour
     public float currentHealth = 1000;
     public bool isLightEnemy;
     public bool isDead;
+
+    private Animator anim;
+
+    private void Awake() => anim = GetComponent<Animator>();
 
     private void Start()
     {
@@ -30,6 +35,11 @@ public class HealthController : MonoBehaviour
 
     public void ChangeHealth(float changeInHealth)
     {
+        if (changeInHealth < 0)
+        {
+            if (anim != null && this.gameObject.CompareTag("Enemy")) anim.SetTrigger("hurt");
+        }
+
         if (currentHealth + changeInHealth > maxHealth) currentHealth = maxHealth;
         else currentHealth += changeInHealth;
 
@@ -46,12 +56,29 @@ public class HealthController : MonoBehaviour
     {
         if (this.gameObject.CompareTag("Enemy"))
         {
-            this.gameObject.SetActive(false);
+            var e1 = GetComponent<EnemyBehaviourGrounded>();
+            if (e1 != null)
+            {
+                e1.isDead = true;
+                StartCoroutine(WaitForDeathAnimationToFinish(0.5f));
+            }
+
+            var e2 = GetComponent<EnemyBehaviourFlying>();
+            if (e2 != null)
+            {
+                e2.isDead = true;
+                StartCoroutine(WaitForDeathAnimationToFinish(1));
+            }
         }
         else if (this.gameObject.CompareTag("Player"))
-        {
-            this.gameObject.GetComponent<Animator>().SetTrigger("death");
             GameManager.Instance.PlayerHasDied();
-        }
+
+        if (anim != null) anim.SetTrigger("death");
+    }
+
+    private IEnumerator WaitForDeathAnimationToFinish(float timeToWait)
+    {
+        yield return new WaitForSeconds(timeToWait);
+        this.gameObject.SetActive(false);
     }
 }

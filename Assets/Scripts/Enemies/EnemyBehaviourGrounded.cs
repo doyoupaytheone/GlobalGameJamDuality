@@ -9,8 +9,11 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     [SerializeField] private float attackRadomVarienceRange = 1.5f;
     [SerializeField] private int attackPower = 50;
 
+    public bool isDead;
+
     private Transform enemyTrans;
     private RectTransform enemyHealthTrans;
+    private Animator animator;
     private float startingScale;
     private float startingHealthScale;
     private bool canAttack = true;
@@ -21,6 +24,7 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     {
         enemyTrans = GetComponent<Transform>();
         enemyHealthTrans = GetComponentInChildren<RectTransform>();
+        animator = GetComponent<Animator>();
     }
 
     private void Start()
@@ -29,11 +33,15 @@ public class EnemyBehaviourGrounded : MonoBehaviour
         if (enemyHealthTrans) startingHealthScale = enemyHealthTrans.localScale.x; //Sets the local scaled of the enemy health for reference
     }
 
-    private void FixedUpdate() => CheckEnvironment();
+    private void FixedUpdate()
+    {
+        if (!GameManager.Instance.IsFrozen || !isDead)
+            CheckEnvironment();
+    }
 
     private void Update()
     {
-        if (!GameManager.Instance.IsFrozen)
+        if (!GameManager.Instance.IsFrozen || !isDead)
         {
             if (!isStopped) MoveForward();
         }
@@ -47,7 +55,7 @@ public class EnemyBehaviourGrounded : MonoBehaviour
         
         //Checks what object is in front of it with raycast
         var objectCheck = new Vector2(enemyTrans.position.x + 1 * direction, enemyTrans.position.y);
-        RaycastHit2D hit = Physics2D.Raycast(objectCheck, Vector2.right * direction, 1f);
+        RaycastHit2D hit = Physics2D.Raycast(objectCheck, Vector2.right * direction, 0.25f);
         Debug.DrawLine(enemyTrans.position, hit.point, Color.red);
         if (hit.collider != null)
         {
@@ -91,6 +99,8 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     private void Attack()
     {
         StartCoroutine(WaitForNextAttack());
+
+        if (animator != null) animator.SetTrigger("attack"); //Plays the attack animation
 
         Collider2D[] enemiesToDamage = Physics2D.OverlapCircleAll(enemyTrans.position, attackRange);
 

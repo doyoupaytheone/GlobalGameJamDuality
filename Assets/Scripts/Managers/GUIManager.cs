@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GUIManager : MonoBehaviour
 {
@@ -7,6 +8,8 @@ public class GUIManager : MonoBehaviour
     [SerializeField] private CanvasFadeEffect deathMenu;
     [SerializeField] private CanvasFadeEffect maxDarkness;
     [SerializeField] private CanvasFadeEffect maxLight;
+    [SerializeField] private Image[] darkCoreIcons;
+    [SerializeField] private Image[] lightCoreIcons;
 
     private void Update()
     {
@@ -14,7 +17,20 @@ public class GUIManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape)) PauseGame();
     }
 
-    #region InGameMenus
+    //Adjusts player HUD depending on the number of cores the player has
+    public void UpdateCoresOnHud(int darkCoreCount, int lightCoreCount)
+    {
+        for (int i = 0; i < darkCoreIcons.Length; i++)
+        {
+            if (darkCoreCount > i) darkCoreIcons[i].enabled = true;
+            else darkCoreIcons[i].enabled = false;
+        }
+        for (int i = 0; i < lightCoreIcons.Length; i++)
+        {
+            if (lightCoreCount > i) lightCoreIcons[i].enabled = true;
+            else lightCoreIcons[i].enabled = false;
+        }
+    }
 
     //Toggles the visibility of a canvas
     public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0);
@@ -67,6 +83,4 @@ public class GUIManager : MonoBehaviour
             GameManager.Instance.Pause(isGamePaused); //If the game is not pause, stop the time after the fade
         }
     }
-
-    #endregion
 }

@@ -26,9 +26,13 @@ public class PlayerCollects : MonoBehaviour
         
     }
 
- 
+    public void AddCore(bool isLightCore)
+    {
+        if (isLightCore) whiteCores++;
+        else blackCores++;
 
-
+        guiManager.UpdateCoresOnHud(blackCores, whiteCores);
+    }
 
 
 }
