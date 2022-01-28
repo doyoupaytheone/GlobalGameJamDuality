@@ -7,19 +7,11 @@ using TMPro;
 public class PlayerCollects : MonoBehaviour
 {
 
-    public int blackCores;
-    public int whiteCores;
+    public int whiteBlackCores = 0;
 
-    private GUIManager guiManager;
+    // public TextMeshProUGUI coreAmount;
 
-    void awake()
-    {
-        guiManager = FindObjectOfType<GUIManager>();
 
-        whiteCores = 0;
-        blackCores = 0;
-
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +22,7 @@ public class PlayerCollects : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+         // coreAmount.text = whiteBlackCores.ToString();
         
     }
 

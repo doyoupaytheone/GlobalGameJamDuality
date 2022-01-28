@@ -4,13 +4,12 @@ using UnityEngine;
 public class ColorCores : MonoBehaviour
 {
     private PlayerCollects playerCollects;
-    private AudioSource audioSource;
-
-    public bool isLightCore;
-
+    // public GameObject player;
+   
     void awake()
     {
-        audioSource = GetComponent<AudioSource>();
+        
+       
     }
 
     // Start is called before the first frame update
@@ -31,9 +30,8 @@ public class ColorCores : MonoBehaviour
         if (other.tag == "Player") // Player collides with core and core will disappear
         {
             playerCollects = other.gameObject.GetComponent<PlayerCollects>();
-            playerCollects.AddCore(isLightCore);
-            audioSource.Play();
-            StartCoroutine(WaitForSoundToPlay(audioSource.clip.length)); //Waits until the audio clip stops playing before disabling the core
+            playerCollects.whiteBlackCores += 1;
+            Destroy(this.gameObject);
         }
 
     }
