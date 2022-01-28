@@ -460,15 +460,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 4
-  hoverDistance: 0.25
   alertDistance: 10
-  dampTime: 1.75
+  dampTime: 3
   navPoints: []
-  attackRange: 7
-  attackResetTime: 1.5
-  attackRadomVarienceRange: 1.5
   attackPower: 50
   isFollowingPlayer: 0
+  isDead: 0
 --- !u!1 &5044087210815912519
 GameObject:
   m_ObjectHideFlags: 0

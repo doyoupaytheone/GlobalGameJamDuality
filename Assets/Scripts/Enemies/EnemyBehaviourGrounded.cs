@@ -17,7 +17,7 @@ public class EnemyBehaviourGrounded : MonoBehaviour
     private float startingScale;
     private float startingHealthScale;
     private bool canAttack = true;
-    private bool isFacingRight;
+    private bool isFacingRight = true;
     private bool isStopped;
 
     private void Awake()
