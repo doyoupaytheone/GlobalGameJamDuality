@@ -3549,6 +3549,10 @@ PrefabInstance:
       value: FlyingEnemy_Light
       objectReference: {fileID: 0}
     - target: {fileID: 5044087210331310051, guid: e56f195b7733c584ca4f17cc91b44fcc, type: 3}
+      propertyPath: alertDistance
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5044087210331310051, guid: e56f195b7733c584ca4f17cc91b44fcc, type: 3}
       propertyPath: navPoints.Array.size
       value: 3
       objectReference: {fileID: 0}

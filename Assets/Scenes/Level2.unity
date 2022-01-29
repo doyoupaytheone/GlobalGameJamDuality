@@ -1182,6 +1182,10 @@ PrefabInstance:
       value: LockedWall
       objectReference: {fileID: 0}
     - target: {fileID: 5756107586387123596, guid: be9138a40a137784494b9829401c2854, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 832846455}
+    - target: {fileID: 5756107586387123596, guid: be9138a40a137784494b9829401c2854, type: 3}
       propertyPath: CoresRequired
       value: 
       objectReference: {fileID: 2036061554}
@@ -3537,6 +3541,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LockedWall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5756107586387123596, guid: be9138a40a137784494b9829401c2854, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 832846455}
     - target: {fileID: 5756107586387123596, guid: be9138a40a137784494b9829401c2854, type: 3}
       propertyPath: CoresRequired
       value: 
