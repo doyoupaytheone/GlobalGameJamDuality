@@ -34,6 +34,7 @@ public class ColorCores : MonoBehaviour
         {
             playerCollects = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollects>();
             playerCollects.AddCore(isLightCore);
+            this.gameObject.GetComponent<Collider2D>().enabled = false;
             this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
             if (audioSource != null)
             {

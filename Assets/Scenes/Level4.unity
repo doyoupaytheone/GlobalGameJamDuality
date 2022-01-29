@@ -774,6 +774,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5496725747898075111, guid: 7b830874222707049b7770020931eaa8, type: 3}
   m_PrefabInstance: {fileID: 392088754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &392088756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5496725747898075106, guid: 7b830874222707049b7770020931eaa8, type: 3}
+  m_PrefabInstance: {fileID: 392088754}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &424278051
 GameObject:
   m_ObjectHideFlags: 0
@@ -1796,11 +1801,11 @@ PrefabInstance:
       objectReference: {fileID: 554079241}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: darkEnemies.Array.size
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: lightEnemies.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: darkEnemies.Array.data[0]
@@ -1809,7 +1814,7 @@ PrefabInstance:
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: darkEnemies.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 392088756}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: darkEnemies.Array.data[2]
       value: 
@@ -1817,19 +1822,19 @@ PrefabInstance:
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: lightEnemies.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1429423413}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: lightEnemies.Array.data[1]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 885042416}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: lightEnemies.Array.data[2]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1952690426}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: lightEnemies.Array.data[3]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1656330131}
     - target: {fileID: 8987343519266318611, guid: d39e42d49fca5ea469b528fa9774d61c, type: 3}
       propertyPath: lightEnemies.Array.data[4]
       value: 
@@ -1983,6 +1988,11 @@ PrefabInstance:
 --- !u!4 &885042415 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7500398243432499401, guid: f76527d057e909f4087869b827223082, type: 3}
+  m_PrefabInstance: {fileID: 885042414}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &885042416 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7500398243432499404, guid: f76527d057e909f4087869b827223082, type: 3}
   m_PrefabInstance: {fileID: 885042414}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &938885065
@@ -3247,6 +3257,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7500398243432499401, guid: f76527d057e909f4087869b827223082, type: 3}
   m_PrefabInstance: {fileID: 1656330129}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1656330131 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7500398243432499404, guid: f76527d057e909f4087869b827223082, type: 3}
+  m_PrefabInstance: {fileID: 1656330129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1667136878
 GameObject:
   m_ObjectHideFlags: 0
@@ -3742,6 +3757,11 @@ PrefabInstance:
 --- !u!4 &1952690425 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7500398243432499401, guid: f76527d057e909f4087869b827223082, type: 3}
+  m_PrefabInstance: {fileID: 1952690424}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1952690426 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7500398243432499404, guid: f76527d057e909f4087869b827223082, type: 3}
   m_PrefabInstance: {fileID: 1952690424}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2022129621

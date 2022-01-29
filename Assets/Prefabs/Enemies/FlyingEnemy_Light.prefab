@@ -443,6 +443,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 5044087209249085517}
+  damagedColor: {r: 0.5803922, g: 0.09019608, b: 0.09019608, a: 1}
   maxHealth: 600
   currentHealth: 600
   isLightEnemy: 1
@@ -463,6 +464,9 @@ MonoBehaviour:
   alertDistance: 10
   dampTime: 3
   navPoints: []
+  attackResetTime: 1.2
+  attackRadomVarienceRange: 0.5
+  attackRange: 1.3
   attackPower: 50
   isFollowingPlayer: 0
   isDead: 0

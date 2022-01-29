@@ -93,6 +93,7 @@ MonoBehaviour:
     m_Bits: 1024
   throwStar: {fileID: 1252243683051303324, guid: b7d2a07cca481b449858e84309554624, type: 3}
   wallStar: {fileID: 6781167332700664777, guid: b7d2a07cca481b449858e84309554624, type: 3}
+  poofEffect: {fileID: 2954071978192093176, guid: 717a9e77d6bc5404790d88bcffce6e42, type: 3}
   spriteTrans: {fileID: 7752620187894141790}
 --- !u!1 &6029317249461275125
 GameObject:

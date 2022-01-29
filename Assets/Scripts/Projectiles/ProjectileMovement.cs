@@ -11,6 +11,7 @@ public class ProjectileMovement : MonoBehaviour
 
     [SerializeField] private Sprite throwStar;
     [SerializeField] private Sprite wallStar;
+    [SerializeField] private ParticleSystem poofEffect;
     [SerializeField] private Transform spriteTrans;
 
     private Transform projectileTrans;
@@ -18,6 +19,7 @@ public class ProjectileMovement : MonoBehaviour
     private RotateItem rotateItem;
     private SpriteRenderer spriteRenderer;
     private Collider2D stuckInStaticObject;
+    private ParticleSystem thisPoof;
     private Vector2 startingPosition;
     private Vector2 relativeDirectionOfCollision;
 
@@ -37,7 +39,7 @@ public class ProjectileMovement : MonoBehaviour
         CheckIfStillStuck();
         
         if (Vector2.Distance(projectileTrans.position, playerTrans.position) > maxDistance) //Checks to see if the player has left the star (if in wall, etc.)
-            this.gameObject.SetActive(false);
+            TurnOffProjecile();
 
         if (GameManager.Instance.IsFrozen || isStuck) return;
 
@@ -85,21 +87,30 @@ public class ProjectileMovement : MonoBehaviour
 
     public void ResetFirePosition() => startingPosition = projectileTrans.position;
 
+    private void TurnOffProjecile()
+    {
+        if (thisPoof == null) thisPoof = Instantiate(poofEffect, projectileTrans.position, Quaternion.identity);
+        else thisPoof.transform.position = projectileTrans.position;
+
+        thisPoof.Play();
+        this.gameObject.SetActive(false);
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Player") && isStuck) //Puts the star back into the player's inventory if it's stuck
-            this.gameObject.SetActive(false);
+            TurnOffProjecile();
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
             collision.GetComponent<HealthController>().ChangeHealth(-damagePower);
-            this.gameObject.SetActive(false);
+            TurnOffProjecile();
         }
 
         if (collision.gameObject.CompareTag("Trigger"))
         {
             collision.gameObject.GetComponent<ProjectileTrigger>().TriggerEffect();
-            this.gameObject.SetActive(false);
+            TurnOffProjecile();
         }
     }
 }

@@ -31,7 +31,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _downButton;
     [SerializeField] private TextMeshProUGUI _interactButton;
     [SerializeField] private TextMeshProUGUI _jumpButton;
-    [SerializeField] private TextMeshProUGUI _sprintButton;
     [SerializeField] private TextMeshProUGUI _primaryAttackButton;
     [SerializeField] private TextMeshProUGUI _secondaryAttackButton;
 
@@ -166,7 +165,6 @@ public class MenuManager : MonoBehaviour
         _downButton.text = PlayerPrefData.Down.ToString();
         _interactButton.text = PlayerPrefData.Interact.ToString();
         _jumpButton.text = PlayerPrefData.Jump.ToString();
-        _sprintButton.text = PlayerPrefData.Sprint.ToString();
         _primaryAttackButton.text = PlayerPrefData.PrimaryAttack.ToString();
         _secondaryAttackButton.text = PlayerPrefData.SecondaryAttack.ToString();
     }

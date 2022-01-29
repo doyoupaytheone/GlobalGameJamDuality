@@ -1,25 +1,60 @@
 ﻿using UnityEngine;
+using System.Collections;
 
 public class CameraController : MonoBehaviour
 {
     [SerializeField] private float dampTime = 0.25f;
+    [SerializeField] private float cameraDistance = -25;
     [SerializeField] private float cameraOffsetX = 0;
     [SerializeField] private float cameraOffsetY = 1;
-    [SerializeField] private float cameraDistance = -10f;
+    [SerializeField] private float VERTICALLOOKMAX = 1.5f; //max amount you can look above and below
+    [SerializeField] private Vector3 levelLookTarget;
 
-    private Transform playerTrans;
+    [HideInInspector] public bool isFollowingPlayer = true; //What target the camera is looking at
 
-    private float newVerticalTarget;
+    private Transform player;
+    private float cameraWaitTime;
+    private float newVerticalTarget; //camera view is set to the target position above and below target player 
+    private Vector3 targetPos; // targeting points to follow left and right of player 
+    private Vector3 zeroVelocity = Vector3.zero;//access the movement speed of the camera as it follows the player
 
-    private Vector3 targetPos;
-    private Vector3 zeroVelocity = Vector3.zero;
+    //initializing gameObject and finding object tagged with Player tagged
+    private void Start() => player = GameObject.FindGameObjectWithTag("Player").transform;
 
-    private void Start() => playerTrans = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+    //Gets vertical input from player to adjust the camera height to "look" up and down
     private void Update()
     {
-        //Uses the position of the player to smoothly move the camera with the player
-        targetPos = new Vector3(playerTrans.position.x + cameraOffsetX, newVerticalTarget + playerTrans.position.y + cameraOffsetY, cameraDistance);
+        if (GameManager.Instance.IsFrozen) return;
+        
+        if (Input.GetKey(PlayerPrefData.Up) && !GameManager.Instance.IsFrozen) newVerticalTarget = VERTICALLOOKMAX;
+        else if (Input.GetKey(PlayerPrefData.Down) && !GameManager.Instance.IsFrozen) newVerticalTarget = -VERTICALLOOKMAX;
+        else newVerticalTarget = 0;
+    }
+
+    //Uses the position of the player to smoothly move the camera with the player
+    private void LateUpdate()
+    {
+        if (isFollowingPlayer)
+            targetPos = new Vector3(player.position.x + cameraOffsetX, newVerticalTarget + player.position.y + cameraOffsetY, player.position.z + cameraDistance);
+        else
+            targetPos = new Vector3(levelLookTarget.x, levelLookTarget.y + cameraOffsetY, player.position.z + cameraDistance);
+
         transform.position = Vector3.SmoothDamp(gameObject.transform.position, targetPos, ref zeroVelocity, dampTime);
+    }
+
+    public void MoveCameraToTarget(float movementTime, Transform movementPosition)
+    {
+        cameraWaitTime = movementTime;
+        levelLookTarget = movementPosition.position;
+        StartCoroutine(CameraMoveOverTime());
+    }
+
+    private IEnumerator CameraMoveOverTime()
+    {
+        isFollowingPlayer = false;
+        GameManager.Instance.ToggleFreezePlayer(); //Freezes player input
+        yield return new WaitForSeconds(cameraWaitTime);
+        GameManager.Instance.ToggleFreezePlayer(); //Unfreezes player input
+        isFollowingPlayer = true;
     }
 }

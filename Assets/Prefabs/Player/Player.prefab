@@ -314,6 +314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slider: {fileID: 0}
+  damagedColor: {r: 0.5803922, g: 0.09019608, b: 0.09019608, a: 1}
   maxHealth: 1000
   currentHealth: 1000
   isLightEnemy: 0
