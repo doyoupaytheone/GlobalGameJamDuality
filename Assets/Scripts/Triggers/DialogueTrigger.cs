@@ -24,9 +24,9 @@ public class DialogueTrigger : MonoBehaviour
         DialogueManager.StartDialogue(dialogue);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         //If this is a locationally triggered dialogue, it plays the first time the player enters that location
-        if (other.gameObject.CompareTag("Player") && !this.CompareTag("OpeningDialogue")) TriggerDialogue();
+        if (collision.gameObject.CompareTag("Player") && !this.CompareTag("OpeningDialogue")) TriggerDialogue();
     }
 }

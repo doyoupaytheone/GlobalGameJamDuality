@@ -14,10 +14,17 @@ public class DialogueManager : MonoBehaviour
 
     private Queue<string> dialogueQueue = new Queue<string>();
     private DialogueData currentDialogueData;
-    private AudioManager audioManager;
+    //private AudioManager audioManager;
     private int currentSentence;
 
-    private void Awake() => audioManager = FindObjectOfType<AudioManager>();
+    //private void Awake() => audioManager = FindObjectOfType<AudioManager>();
+
+    private void Update()
+    {
+        if (!GameManager.Instance.IsFrozen) return;
+
+        if (Input.anyKeyDown) DisplayNextSentence();
+    }
 
     //Turn on and off the dialogue group
     public void TurnOnDialogueGroup() => _dialogueGroup.SetActive(true);
@@ -50,7 +57,7 @@ public class DialogueManager : MonoBehaviour
 
         _speakerImage.sprite = currentDialogueData.speakerSprites[currentDialogueData.currentSentenceSpeaker[currentSentence]];
         _speakerName.text = currentDialogueData.speakerNames[currentDialogueData.currentSentenceSpeaker[currentSentence]];
-        audioManager.UISound(currentDialogueData.speakerSounds[currentDialogueData.currentSentenceSpeaker[currentSentence]]);
+        //audioManager.UISound(currentDialogueData.speakerSounds[currentDialogueData.currentSentenceSpeaker[currentSentence]]);
 
         string sentence = dialogueQueue.Dequeue();
         StopAllCoroutines(); //If the player presses next before the last sentence has finished, stop the previous sentence
@@ -68,8 +75,5 @@ public class DialogueManager : MonoBehaviour
             _speakerDialogue.text += letter;
             yield return new WaitForSeconds(_letterTypeWaitTime);
         }
-
-        if (_speakerDialogue.text != "*ROAR*") //If the boar is not roaring...
-            audioManager.StopUISound(); //Stops the character's "talking" audio
     }
 }

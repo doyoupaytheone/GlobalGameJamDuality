@@ -10,6 +10,7 @@ TagManager:
   - EHC
   - Static
   - Trigger
+  - OpeningDialogue
   layers:
   - Default
   - TransparentFX
