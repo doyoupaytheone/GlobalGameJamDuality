@@ -61,6 +61,12 @@ public class GUIManager : MonoBehaviour
         GameManager.Instance.RefreshScene();
     }
 
+    public void ToNextLevel()
+    {
+        PauseGame();
+        GameManager.Instance.ToNextScene();
+    }
+
     public void PauseGame()
     {
         bool isGamePaused = GameManager.Instance.currentGameState != GameManager.GameState.Paused; //Checks to see if the game is currently paused
