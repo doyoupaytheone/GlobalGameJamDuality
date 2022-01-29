@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using TMPro;
 
@@ -8,9 +9,10 @@ public class MenuManager : MonoBehaviour
 {
     #region SerializeField Variables
 
-    [Header("Save Slot Objects")]
+    [Header("Save Objects")]
     [SerializeField] private TextMeshProUGUI[] _playTimesText;
     [SerializeField] private TextMeshProUGUI[] _playTimesTextData;
+    [SerializeField] private GameObject _enemyEasterEgg;
 
     [Header("Video Selections")]
     [SerializeField] private TMP_Dropdown _resolutionDropdown;
@@ -77,6 +79,9 @@ public class MenuManager : MonoBehaviour
                 _playTimesText[i].text = (int)(playTimes[i] / 60) + ":" + minutes;
                 _playTimesTextData[i].text = (int)(playTimes[i] / 60) + ":" + minutes;
             }
+
+            if (GameManager.Instance.SaveSlots[i].FurthestLevel == SceneManager.sceneCountInBuildSettings - 1)
+                _enemyEasterEgg.SetActive(true);
         }
 
         //Sets the values of the sliders for settings
