@@ -383,6 +383,7 @@ public class GameManager : MonoSingleton<GameManager>
     {
         //Resets SaveData class
         _saveSlots[slotIndex].PlayTime = 0;
+        _saveSlots[slotIndex].FurthestLevel = 0;
 
         //Resaves the new, empty save slot
         BinaryFormatter bf = new BinaryFormatter();

@@ -44,7 +44,7 @@ public class ProjectileMovement : MonoBehaviour
         if (GameManager.Instance.IsFrozen || isStuck) return;
 
         Collider2D checkForCollision = Physics2D.OverlapCircle(projectileTrans.position, 0.15f, staticsLayer);
-        if (checkForCollision != null)
+        if (checkForCollision != null && !checkForCollision.isTrigger)
         {
             stuckInStaticObject = checkForCollision;
             relativeDirectionOfCollision = checkForCollision.transform.position - projectileTrans.position;

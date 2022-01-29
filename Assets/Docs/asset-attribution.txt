@@ -1,8 +1,12 @@
 Asset Attribution
 
 Sprites:
-	Benza by megupets
-	https://opengameart.org/content/benza		
+	Inspired by: Benza by megupets
+	https://opengameart.org/content/benza
+	
+	24x32 Supernatural Creatures by diamonddmgirl
+	https://opengameart.org/content/24x32-supernatural-creatures
+	Under CC by 3.0 and CC by 4.0 (Sprites were Grayscaled)
 
 Audio:
 	Classical_Loop.mp3 by 4barrelcarb

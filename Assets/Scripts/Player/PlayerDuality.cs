@@ -106,6 +106,8 @@ public class PlayerDuality : MonoBehaviour
 
     private void ToggleEnemyVisibility(GameObject[] enemies, bool typeIsLight)
     {
+        if (enemies.Length == 0 || enemies == null) return;
+        
         foreach (GameObject e in enemies)
         {
             if (typeIsLight)
