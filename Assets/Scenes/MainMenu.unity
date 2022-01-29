@@ -1907,18 +1907,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[4].m_Target
       value: 
       objectReference: {fileID: 290418643}
-    - target: {fileID: 2361199599286134985, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 11950980}
-    - target: {fileID: 2361199599286134985, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1057382052}
-    - target: {fileID: 2361199599286134985, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
-      value: 
-      objectReference: {fileID: 290418643}
     - target: {fileID: 2390266314573207595, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_Name
       value: MenuManager
@@ -2079,6 +2067,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[3].m_Target
       value: 
       objectReference: {fileID: 290418643}
+    - target: {fileID: 9036202499922003155, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
+      propertyPath: m_text
+      value: A Coding in Fluer Production
+      objectReference: {fileID: 0}
     - target: {fileID: 9048294200940434744, guid: fa99b2ea15a41ad47ab2554ca2d4be43, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

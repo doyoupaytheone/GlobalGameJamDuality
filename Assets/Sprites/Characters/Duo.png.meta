@@ -28,13 +28,13 @@ TextureImporter:
     second: Duo_Ability0
   - first:
       213: -3959192025083417241
-    second: Duo_8
+    second: Duo_PAttack1
   - first:
       213: 4344485379737754430
-    second: Duo_9
+    second: Duo_PAttack2
   - first:
       213: 6030675193146197429
-    second: Duo_10
+    second: Duo_PAttack3
   - first:
       213: 510072536428405307
     second: Duo_Jump0
@@ -770,6 +770,69 @@ TextureImporter:
       bones: []
       spriteID: 0c39fe8c817fa4aa0800000000000000
       internalID: -6175852253162794048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_PAttack1
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 235
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76de75374df1e09c0800000000000000
+      internalID: -3959192025083417241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_PAttack2
+      rect:
+        serializedVersion: 2
+        x: 702
+        y: 119
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3b952f4f66ba4c30800000000000000
+      internalID: 4344485379737754430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Duo_PAttack3
+      rect:
+        serializedVersion: 2
+        x: 819
+        y: 1
+        width: 118
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b54d33e22341b350800000000000000
+      internalID: 6030675193146197429
       vertices: []
       indices: 
       edges: []
