@@ -14,6 +14,7 @@ public class HealthController : MonoBehaviour
 
     private Animator anim;
     private SpriteRenderer sr;
+    private Color orignialColor;
 
     private void Awake()
     {
@@ -23,6 +24,7 @@ public class HealthController : MonoBehaviour
 
     private void Start()
     {
+        orignialColor = sr.color;
         SetMaxHealth(maxHealth);
         RestoreHealth();
     }
@@ -54,7 +56,7 @@ public class HealthController : MonoBehaviour
         else if (changeInHealth < 0)
         {
             if (anim != null && this.gameObject.CompareTag("Enemy")) anim.SetTrigger("hurt");
-            if (sr != null) StartCoroutine(DisplayHit());
+            if (sr != null) StartCoroutine(DisplayHit(orignialColor));
         }
     }
 
@@ -88,14 +90,14 @@ public class HealthController : MonoBehaviour
         this.gameObject.SetActive(false);
     }
 
-    private IEnumerator DisplayHit()
+    private IEnumerator DisplayHit(Color enemyColorType)
     {
         sr.color = damagedColor;      
         yield return new WaitForSeconds(0.1f);
-        sr.color = Color.white;
+        sr.color = enemyColorType;
         yield return new WaitForSeconds(0.1f);
         sr.color = damagedColor;
         yield return new WaitForSeconds(0.1f);
-        sr.color = Color.white;
+        sr.color = enemyColorType;
     }
 }

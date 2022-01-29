@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7443401278562472095}
   - component: {fileID: 1213324048}
   - component: {fileID: 878851368341936950}
+  - component: {fileID: -2844505906813239263}
   m_Layer: 0
   m_Name: ObsidianCore
   m_TagString: Untagged
@@ -97,6 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a6feac0d5dd48249be9ec9196f244dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isLightCore: 0
 --- !u!58 &1213324048
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -209,3 +211,18 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &-2844505906813239263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7240605564434620056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d082ac2f108b4541a38670f61e8e3c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  floatDistance: 0.25
+  floatSpeed: 0.5
+  floatVariance: 0.2
