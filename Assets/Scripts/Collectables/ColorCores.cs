@@ -3,16 +3,17 @@ using UnityEngine;
 
 public class ColorCores : MonoBehaviour
 {
+    [SerializeField] private AudioClip clip;
+    [SerializeField] private AudioSource audioSource;
+
     private PlayerCollects playerCollects;
-    private AudioSource audioSource;
     // public GameObject player;
 
     public bool isLightCore;
    
     void awake()
     {
-        audioSource = GetComponent<AudioSource>();
-       
+
     }
 
     // Start is called before the first frame update
@@ -39,6 +40,7 @@ public class ColorCores : MonoBehaviour
             if (audioSource != null)
             {
                 audioSource.Play();
+                audioSource.clip = clip;
                 WaitForSoundToPlay(audioSource.clip.length);
             }
             else WaitForSoundToPlay(0);

@@ -1,12 +1,18 @@
 Asset Attribution
 
 Sprites:
+	Cute Monster Sprite Sheet by dogchicken
+	https://opengameart.org/content/cute-monster-sprite-sheet
+
+	Flying Tongue Monster Sprite Sheet by dogchicken
+	https://opengameart.org/content/flying-tongue-monster-sprite-sheet
+
 	Inspired by: Benza by megupets
 	https://opengameart.org/content/benza
 	
-	24x32 Supernatural Creatures by diamonddmgirl
+	Inspired by: 24x32 Supernatural Creatures by diamonddmgirl
 	https://opengameart.org/content/24x32-supernatural-creatures
-	Under CC by 3.0 and CC by 4.0 (Sprites were Grayscaled)
+	Under CC by 3.0 and CC by 4.0
 
 Audio:
 	Classical_Loop.mp3 by 4barrelcarb
