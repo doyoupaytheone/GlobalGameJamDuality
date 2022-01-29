@@ -4,13 +4,14 @@ using UnityEngine;
 public class ColorCores : MonoBehaviour
 {
     private PlayerCollects playerCollects;
+    private AudioSource audioSource;
     // public GameObject player;
 
     public bool isLightCore;
    
     void awake()
     {
-        
+        audioSource = GetComponent<AudioSource>();
        
     }
 
@@ -29,11 +30,17 @@ public class ColorCores : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Player") // Player collides with core and core will disappear
+        if (other.tag == "Player" || other.gameObject.CompareTag("Projectile")) // Player collides with core and core will disappear
         {
-            playerCollects = other.gameObject.GetComponent<PlayerCollects>();
+            playerCollects = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCollects>();
             playerCollects.AddCore(isLightCore);
-            Destroy(this.gameObject);
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            if (audioSource != null)
+            {
+                audioSource.Play();
+                WaitForSoundToPlay(audioSource.clip.length);
+            }
+            else WaitForSoundToPlay(0);
         }
 
     }

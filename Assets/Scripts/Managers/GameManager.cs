@@ -41,6 +41,12 @@ public class GameManager : MonoSingleton<GameManager>
         get { return _currentSaveSlot; }
     }
 
+    private int _furthestLevel;
+    public int FurthestLevel
+    {
+        get { return _furthestLevel; }
+    }
+
     private static string _baseDirectory;
     private static string[] _filepaths = new string[3];
     private static float _sessionStartTime;
@@ -174,8 +180,10 @@ public class GameManager : MonoSingleton<GameManager>
         SavePrefs();
         SaveGame();
 
-        //Begins the transition to the next scene
-        StartCoroutine(TransitionToNextScene(_saveSlots[slotIndex].FurthestLevel));
+        if (_saveSlots[slotIndex].FurthestLevel == 0) //Makes sure that the main menu will not reload itself when trying to load a game
+            ToNextScene();
+        else //Begins the transition to the next scene
+            StartCoroutine(TransitionToNextScene(_saveSlots[slotIndex].FurthestLevel));
     }
 
     //Changes the scene to a particular index
@@ -190,6 +198,9 @@ public class GameManager : MonoSingleton<GameManager>
             StartCoroutine(TransitionToNextScene(0));
         else
         {
+            if (current + 1 > _saveSlots[_currentSaveSlot].FurthestLevel)
+                _saveSlots[_currentSaveSlot].FurthestLevel = current + 1;
+            
             SavePrefs();
             SaveGame();
 
@@ -241,14 +252,9 @@ public class GameManager : MonoSingleton<GameManager>
     //Saves all player preference data
     private void SavePrefs()
     {
-        if (_inputManager != null)
-            _inputManager.SaveAllCustomInputs();
-
-        if (_audioManager != null)
-            _audioManager.SaveAudioPrefs();
-
-        if (_videoManager != null)
-            _videoManager.SaveVideoPrefs();
+        if (_inputManager != null) _inputManager.SaveAllCustomInputs();
+        if (_audioManager != null) _audioManager.SaveAudioPrefs();
+        if (_videoManager != null) _videoManager.SaveVideoPrefs();
 
         PlayerPrefs.Save();
     }
@@ -256,14 +262,9 @@ public class GameManager : MonoSingleton<GameManager>
     //Loads all player preference data
     private void LoadPrefs()
     {
-        if (_inputManager != null)
-            _inputManager.LoadAllCustomInputs();
-
-        if (_audioManager != null)
-            _audioManager.LoadAudioPrefs();
-
-        if (_videoManager != null)
-            _videoManager.LoadVideoPrefs();
+        if (_inputManager != null) _inputManager.LoadAllCustomInputs();
+        if (_audioManager != null) _audioManager.LoadAudioPrefs();
+        if (_videoManager != null) _videoManager.LoadVideoPrefs();
     }
 
     private void SaveDataSetup()
@@ -362,10 +363,8 @@ public class GameManager : MonoSingleton<GameManager>
     {
         _currentSaveSlot = index;
 
-        if (_saveSlots[index].PlayTime == 0)
-            return true;
-        else
-            return false;
+        if (_saveSlots[index].PlayTime == 0) return true;
+        else return false;
     }
 
     public void SaveGame()

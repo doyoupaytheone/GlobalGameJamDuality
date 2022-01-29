@@ -13,7 +13,7 @@ TextureImporter:
     second: Projectiles_ThrowingStarStuck
   - first:
       213: 2013881728091588454
-    second: Projectiles_SoundWaves
+    second: NextLevelDoor
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -193,13 +193,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Projectiles_SoundWaves
+      name: NextLevelDoor
       rect:
         serializedVersion: 2
-        x: 335
-        y: 20
-        width: 106
-        height: 200
+        x: 297
+        y: 10
+        width: 167
+        height: 212
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

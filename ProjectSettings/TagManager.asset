@@ -9,6 +9,7 @@ TagManager:
   - Projectile
   - EHC
   - Static
+  - Trigger
   layers:
   - Default
   - TransparentFX

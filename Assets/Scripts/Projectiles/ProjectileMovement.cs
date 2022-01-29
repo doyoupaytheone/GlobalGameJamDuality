@@ -92,8 +92,13 @@ public class ProjectileMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
-            var health = collision.GetComponent<HealthController>();
-            health.ChangeHealth(-damagePower);
+            collision.GetComponent<HealthController>().ChangeHealth(-damagePower);
+            this.gameObject.SetActive(false);
+        }
+
+        if (collision.gameObject.CompareTag("Trigger"))
+        {
+            collision.gameObject.GetComponent<ProjectileTrigger>().TriggerEffect();
             this.gameObject.SetActive(false);
         }
     }
