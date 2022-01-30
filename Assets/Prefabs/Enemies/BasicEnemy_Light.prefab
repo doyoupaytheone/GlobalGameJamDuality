@@ -416,6 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56b6cce67f1df44493c6dcc977e1d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtSource: {fileID: 0}
+  hurtClip: {fileID: 0}
   slider: {fileID: 7500398244497954659}
   damagedColor: {r: 0.5803922, g: 0.09019608, b: 0.09019608, a: 1}
   maxHealth: 400

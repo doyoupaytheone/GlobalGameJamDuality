@@ -12,8 +12,6 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioMixerSnapshot volumeOffSnapshot;
     [SerializeField] private AudioMixerSnapshot volumeOnSnapshot;
    
-
-
     private int FADETIME = 2;
 
     private void Start()
@@ -36,7 +34,14 @@ public class AudioManager : MonoBehaviour
             PlayerPrefData.UIVolume = PlayerPrefs.GetFloat("UiVolume");
         }
         else
+        {
             Debug.Log("No player preferences for audio were loaded.");
+            PlayerPrefData.MainVolume = 0.8f;
+            PlayerPrefData.MusicVolume = 0.8f;
+            PlayerPrefData.SfxVolume = 0.8f;
+            PlayerPrefData.UIVolume = 0.8f;
+            SaveAudioPrefs();
+        }
     }
 
     //Saves all audio preferences as player prefs

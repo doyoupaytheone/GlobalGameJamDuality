@@ -60,6 +60,7 @@ public class PlayerDuality : MonoBehaviour
             dualityTimer++; //Updates the timer
             UpdateHudDisplay(); //Updates the display
         }
+        /*
         else if (this.gameObject.activeSelf && dualityTimer == maxDualityTime)
         {
             dualityTimer++; //Pushes timer past limit so this only triggers once
@@ -68,6 +69,7 @@ public class PlayerDuality : MonoBehaviour
             if (isInLightMode) gui.ToggleMaxLight();
             else gui.ToggleMaxDarkness();
         }
+        */
     }
 
     private void UpdateHudDisplay()
@@ -93,12 +95,14 @@ public class PlayerDuality : MonoBehaviour
             //Toggles the background color
             background.enabled = isInLightMode;
 
+            /*
             //Checks to be sure gui indicators are reset
             if (dualityTimer == maxDualityTime + 1)
             {
                 if (isInLightMode) gui.ToggleMaxLight();
                 else gui.ToggleMaxDarkness();
             }
+            */
 
             ToggleType();
         }

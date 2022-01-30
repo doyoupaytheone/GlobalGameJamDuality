@@ -4,6 +4,8 @@ using UnityEngine.UI;
 
 public class HealthController : MonoBehaviour
 {
+    [SerializeField] private AudioSource hurtSource;
+    [SerializeField] private AudioClip hurtClip;
     [SerializeField] private Slider slider;
     [SerializeField] private Color damagedColor;
     [SerializeField] private float maxHealth = 1000;
@@ -57,6 +59,11 @@ public class HealthController : MonoBehaviour
         {
             if (anim != null && this.gameObject.CompareTag("Enemy")) anim.SetTrigger("hurt");
             if (sr != null) StartCoroutine(DisplayHit(orignialColor));
+            if (hurtSource != null)
+            {
+                hurtSource.clip = hurtClip;
+                hurtSource.Play();
+            }
         }
     }
 

@@ -313,6 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c56b6cce67f1df44493c6dcc977e1d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hurtSource: {fileID: 1600501114846086548}
+  hurtClip: {fileID: 8300000, guid: 8aa3ba7789b09ca41a98127ecb3c4524, type: 3}
   slider: {fileID: 0}
   damagedColor: {r: 0.5803922, g: 0.09019608, b: 0.09019608, a: 1}
   maxHealth: 1000
@@ -333,10 +335,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 6.5
   moveSmoothing: 0.05
-  fallDistanceMultiplier: 0.7
-  fallAccelerationMultiplier: 1.15
+  fallDistanceMultiplier: 0.75
+  fallAccelerationMultiplier: 1.075
   maxJumpsAllowed: 2
-  jumpForce: 155
+  jumpForce: 165
   isGrounded: 0
 --- !u!114 &4796839457928132010
 MonoBehaviour:
@@ -355,7 +357,7 @@ MonoBehaviour:
   projectile: {fileID: 5343145964411688975, guid: 99fc7abafb9fc704992971a27448217a, type: 3}
   secondaryAttackCooldown: 0.65
   attackRange: 1.5
-  secondaryAttackDamage: 50
+  secondaryAttackDamage: 65
   whatIsEnemies:
     serializedVersion: 2
     m_Bits: 64

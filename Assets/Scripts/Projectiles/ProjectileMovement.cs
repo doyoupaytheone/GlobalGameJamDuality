@@ -103,6 +103,12 @@ public class ProjectileMovement : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Enemy"))
         {
+            var flyingEnemy = collision.gameObject.GetComponent<EnemyBehaviourFlying>();
+            if (flyingEnemy != null)
+            {
+                if (!flyingEnemy.isFollowingPlayer) flyingEnemy.isTargetingPlayer = true;
+            }
+
             collision.GetComponent<HealthController>().ChangeHealth(-damagePower);
             TurnOffProjecile();
         }

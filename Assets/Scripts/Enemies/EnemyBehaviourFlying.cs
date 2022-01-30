@@ -16,6 +16,7 @@ public class EnemyBehaviourFlying : MonoBehaviour
     [SerializeField] private int attackPower = 50;
 
     public bool isFollowingPlayer = false; //Flags that the enemy is following the player
+    public bool isTargetingPlayer = false;
     public bool isDead;
 
     private Transform enemyTrans;
@@ -49,7 +50,8 @@ public class EnemyBehaviourFlying : MonoBehaviour
     {
         if (GameManager.Instance.IsFrozen || isDead) return;
 
-        var dist = CheckPlayerDistance(); //Calcuates the distance from the player and decides if the enemy will keep following
+        if (!isTargetingPlayer)
+            CheckPlayerDistance(); //Calcuates the distance from the player and decides if the enemy will keep following
 
         if (isFollowingPlayer)
         {
