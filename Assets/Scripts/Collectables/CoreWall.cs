@@ -39,15 +39,14 @@ public class CoreWall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CollectedCoresRequired();
-       
+        //CollectedCoresRequired();    
     }
 
     void CollectedCoresRequired()
     {
         playerCollects = player.gameObject.GetComponent<PlayerCollects>();
         
-        if (playerCollects.whiteCores + playerCollects.blackCores == coresRequired )
+        if (playerCollects.whiteCores + playerCollects.blackCores >= coresRequired )
         {
             StartCoroutine(WallFade(alphaValue, fadeDelay));
             Debug.Log("Cores need acquired");
@@ -82,12 +81,18 @@ public class CoreWall : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player")
+        if(other.gameObject.CompareTag("Player"))
         {
-            if (playerCollects.whiteCores + playerCollects.blackCores != coresRequired)
+            playerCollects = other.gameObject.GetComponent<PlayerCollects>();
+
+            if (playerCollects.whiteCores + playerCollects.blackCores < coresRequired)
             {
                 CoresRequired.enabled = true;
                 CoresRequiredText.text = "Cores Needed to Proceed: " + coresRequired.ToString();
+            }
+            else
+            {
+                CollectedCoresRequired();
             }
         }
        
