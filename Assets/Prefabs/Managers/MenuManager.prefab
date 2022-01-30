@@ -1972,7 +1972,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 826c717771a320a4cbf5fb4ab51bb1f8, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 974e558b2da6a4644a462f99ff306084, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3092,6 +3092,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &193151500994934623
 GameObject:
   m_ObjectHideFlags: 0
@@ -4466,6 +4467,7 @@ MonoBehaviour:
   delayFadeInTime: 1
   delayFadeOutTime: 3
   isVisible: 0
+  isFading: 0
 --- !u!1 &1357317129869010107
 GameObject:
   m_ObjectHideFlags: 0
@@ -7677,6 +7679,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &2361199597963974105
 GameObject:
   m_ObjectHideFlags: 0
@@ -9968,6 +9971,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &2361199598695133653
 GameObject:
   m_ObjectHideFlags: 0
@@ -11600,6 +11604,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &2361199599073860456
 GameObject:
   m_ObjectHideFlags: 0
@@ -13840,6 +13845,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &4159994636799219514
 GameObject:
   m_ObjectHideFlags: 0
@@ -14655,6 +14661,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &5632672643871735887
 GameObject:
   m_ObjectHideFlags: 0
@@ -16407,6 +16414,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &6902985889080121300
 GameObject:
   m_ObjectHideFlags: 0
@@ -16689,6 +16697,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 4
   isVisible: 0
+  isFading: 0
 --- !u!1 &7140412607997393127
 GameObject:
   m_ObjectHideFlags: 0
@@ -17602,6 +17611,7 @@ MonoBehaviour:
   delayFadeInTime: 4
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &7626161518458558125
 GameObject:
   m_ObjectHideFlags: 0
@@ -19119,6 +19129,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &7974976532589224470
 GameObject:
   m_ObjectHideFlags: 0
@@ -19461,6 +19472,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &7974976533160013428
 GameObject:
   m_ObjectHideFlags: 0
@@ -20174,6 +20186,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &7974976533465933823
 GameObject:
   m_ObjectHideFlags: 0
@@ -21587,6 +21600,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &8824594309430238142
 GameObject:
   m_ObjectHideFlags: 0
@@ -22158,6 +22172,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 7468593596982836241}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8824594309734421670}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8824594309790043318
 GameObject:
   m_ObjectHideFlags: 0
@@ -22322,6 +22348,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7468593596982836241}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8824594309790043312}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -23835,6 +23873,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 7468593596982836241}
+        m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8824594311207609288}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 

@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 [RequireComponent(typeof(CanvasGroup))] //Forces this game object to have a canvas group
 public class CanvasFadeEffect : MonoBehaviour
@@ -16,6 +17,7 @@ public class CanvasFadeEffect : MonoBehaviour
     [SerializeField] private float delayFadeOutTime = 0;
 
     public bool isVisible = false; //Flags the object as visible or not
+    public bool isFading = false; //Flags if the object is currently fading
     private CanvasGroup thisGroup; //Reference to this object's canvas group to use the alpha to fade
 
     private void Awake() => thisGroup = GetComponent<CanvasGroup>(); //Gets reference to the canvas group on this object
@@ -55,8 +57,17 @@ public class CanvasFadeEffect : MonoBehaviour
     //Fades the group in or out depending on targetAlpha
     public IEnumerator FadeToTarget(float targetAlpha, float fadeDelay)
     {
-        if (fadeDelay > 0) yield return new WaitForSeconds(fadeDelay);
+        isFading = true;
+
+        var objs = this.gameObject.GetComponentsInChildren<Button>();
         
+        if (isVisible)
+        {
+            foreach (Button button in objs) button.interactable = !isVisible;
+        }
+
+        if (fadeDelay > 0) yield return new WaitForSeconds(fadeDelay);
+
         float toTarget = 0; //Resets the target value
 
         if (thisGroup.alpha > targetAlpha)
@@ -78,8 +89,14 @@ public class CanvasFadeEffect : MonoBehaviour
             }
         }
 
+        if (!isVisible)
+        {
+            foreach (Button button in objs) button.interactable = !isVisible;
+        }
+
         thisGroup.interactable = !isVisible; //Makes the group interactable or not depending on the visibility
         thisGroup.blocksRaycasts = !isVisible; //Makes the group block raycasts or not depending on the visibility
         isVisible = !isVisible; //Flags new visibility
+        isFading = false;
     }
 }

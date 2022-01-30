@@ -2515,6 +2515,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &1155686044725176895
 GameObject:
   m_ObjectHideFlags: 0
@@ -2923,6 +2924,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3791705650812517334}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3676,6 +3689,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &3482359633190610737
 GameObject:
   m_ObjectHideFlags: 0
@@ -3950,6 +3964,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2148755752433893386}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4368,6 +4394,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1791017508110228260}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4521117495697625765
 GameObject:
   m_ObjectHideFlags: 0
@@ -4587,6 +4625,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3502174334993844622}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4819,6 +4869,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 6966087956117707391}
           m_ObjectArgumentAssemblyTypeName: CanvasFadeEffect, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 3395502262387347857}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5073,6 +5135,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &6401276655005435216
 GameObject:
   m_ObjectHideFlags: 0
@@ -5788,6 +5851,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &7431654950238429897
 GameObject:
   m_ObjectHideFlags: 0
@@ -5895,6 +5959,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &7686037217479008567
 GameObject:
   m_ObjectHideFlags: 0
@@ -6040,6 +6105,7 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0
 --- !u!1 &8140227577393182345
 GameObject:
   m_ObjectHideFlags: 0
@@ -6180,6 +6246,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 471089460848965148}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -6337,6 +6415,18 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 3920039808381544529}
           m_ObjectArgumentAssemblyTypeName: CanvasFadeEffect, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6958602829147021870}
+        m_TargetAssemblyTypeName: GUIManager, Assembly-CSharp
+        m_MethodName: DeactivateButton
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 427653386044715124}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7337,3 +7427,4 @@ MonoBehaviour:
   delayFadeInTime: 0
   delayFadeOutTime: 0
   isVisible: 0
+  isFading: 0

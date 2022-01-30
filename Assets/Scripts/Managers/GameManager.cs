@@ -170,6 +170,7 @@ public class GameManager : MonoSingleton<GameManager>
         SavePrefs();
         SaveGame();
 
+        StopAllCoroutines();
         //Begins the transition to the next scene
         StartCoroutine(TransitionToNextScene(sceneIndex));
     }
@@ -180,6 +181,7 @@ public class GameManager : MonoSingleton<GameManager>
         SavePrefs();
         SaveGame();
 
+        StopAllCoroutines();
         if (_saveSlots[slotIndex].FurthestLevel == 0) //Makes sure that the main menu will not reload itself when trying to load a game
             ToNextScene();
         else //Begins the transition to the next scene
@@ -194,6 +196,7 @@ public class GameManager : MonoSingleton<GameManager>
 
         //Checks if there is another scene
         //If not, go to the main menu
+        StopAllCoroutines();
         if (current + 1 > SceneManager.sceneCountInBuildSettings)
             StartCoroutine(TransitionToNextScene(0));
         else
@@ -234,6 +237,7 @@ public class GameManager : MonoSingleton<GameManager>
                 fadeCanvas.alpha -= 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
+            //_isFrozen = true;
         }
         else
         {
@@ -242,6 +246,7 @@ public class GameManager : MonoSingleton<GameManager>
                 fadeCanvas.alpha += 0.01f;
                 yield return new WaitForSeconds(0.01f);
             }
+            //_isFrozen = false;
         }
     }
 

@@ -32,6 +32,9 @@ public class GUIManager : MonoBehaviour
         }
     }
 
+    //Deactivates the button just used
+    public void DeactivateButton(Button button) => button.interactable = false;
+
     //Toggles the visibility of a canvas
     public void ToggleMenu(CanvasFadeEffect canvasToToggle) => canvasToToggle.ToggleFade(0);
 

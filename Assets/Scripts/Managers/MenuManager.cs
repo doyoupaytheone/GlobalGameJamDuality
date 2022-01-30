@@ -44,6 +44,9 @@ public class MenuManager : MonoBehaviour
 
     private void Start() => ResetResolutionOptions();
 
+    //Deactivates the button just used
+    public void DeactivateButton(Button button) => button.interactable = false;
+
     //Tells the game manager to begin the game
     public void StartGame(int slotIndex) => GameManager.Instance.ToFurthestScene(slotIndex);
 
